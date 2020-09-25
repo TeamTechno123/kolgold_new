@@ -18,18 +18,18 @@
     <section class="top-nav">
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-12">
               <p class="marquee"> <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. </span>  </p>
           </div>
-          <div class="col-md-4 text-right m-center">
+          <!-- <div class="col-md-4 text-right m-center">
              <p class="p-1 pb-1"><span> <i class="fas fa-search f-16"></i>  </span> <span class="ml-2"> <i class="fas fa-cart-plus"></i></span></p> 
-          </div>
+          </div> -->
         </div>
         
       </div>
     </section>
 
-    <section class="home-nav">
+    <section class="home-nav">     
       <div class="nav-main">
         <nav class="navbar navbar-expand-lg navbar-light ">
           <a class="navbar-brand" href="<?php echo base_url(); ?>"> <img src="<?php echo base_url(); ?>assets/images/website/logo.png"> </a>
