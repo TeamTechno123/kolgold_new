@@ -54,6 +54,11 @@ $route['default_controller'] = 'Website';
 $route['Pharmacy'] = 'Website/pharmacy_index';
 $route['Lab-Tests'] = 'Website/lab_index';
 
+$route['Terms-condition'] = 'Website/terms';
+$route['Privacy-Policy'] = 'Website/privacy';
+$route['Shipping-Policy'] = 'Website/shipping';
+$route['Return-Policy'] = 'Website/return';
+$route['FAQ'] = 'Website/faq';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
