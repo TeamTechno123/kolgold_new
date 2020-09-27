@@ -52,8 +52,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Website';
 
 $route['Pharmacy'] = 'Website/pharmacy_index';
+$route['Shop'] = 'Website/shop';
+$route['Register'] = 'Website/register';
 $route['Lab-Tests'] = 'Website/lab_index';
 
+$route['About-Us'] = 'Website/about';
+$route['Contact-Us'] = 'Website/contact';
+$route['Payment-Methode'] = 'Website/payment';
+$route['Disclaimer'] = 'Website/disclaimer';
+$route['Blog'] = 'Website/blog';
 $route['Terms-condition'] = 'Website/terms';
 $route['Privacy-Policy'] = 'Website/privacy';
 $route['Shipping-Policy'] = 'Website/shipping';

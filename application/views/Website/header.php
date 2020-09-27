@@ -31,15 +31,17 @@
                 <a class="nav-link" href="<?php echo base_url(); ?>">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Featured Product</a>
+                <a class="nav-link" href="#">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Category</a>
+                <a class="nav-link" href="<?php echo base_url(); ?>Shop">Shop</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
               </li>
                <li class="nav-item">
                 <a class="nav-link" href="#">Contact Us</a>
-              </li>
-              
+              </li>              
             </ul>
           </div>
         </nav>
@@ -51,7 +53,7 @@
        </div>
 
        <div class="col-md-5">
-          <p class="login mt-3 text-center"> <span class="f-14 text-grey"> Login / Register </span> <span class="ml-2 f-20"><i class="far fa-heart"></i></span> <span class="ml-2 f-20"> <i class="fas fa-search f-16"></i>  </span> <span class="ml-2 f-20"> <i class="fas fa-cart-plus"></i></span><span class="f-14 ml-2"> <i class="fas fa-rupee-sign"></i> 0.00 </span> </p> 
+          <p class="login mt-3 text-center"> <span class="f-14 text-grey" data-toggle="modal" data-target="#exampleModal" >  Login / Register</span> <span class="ml-2 f-20"><i class="far fa-heart"></i></span> <span class="ml-2 f-20"> <i class="fas fa-search f-16"></i>  </span> <span class="ml-2 f-20"> <i class="fas fa-cart-plus"></i></span><span class="f-14 ml-2"> <i class="fas fa-rupee-sign"></i> 0.00 </span> </p> 
        </div>
     </div>
        

@@ -11,6 +11,57 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     	$this->load->view('Website/index');
     }
 
+     public function about(){
+      $this->load->view('Website/about');
+    }
+
+    public function login(){
+      $this->load->view('Website/login');
+    }
+
+     public function register(){
+      $this->load->view('Website/register');
+    }
+
+     public function forgotp(){
+      $this->load->view('Website/forgotp');
+    }
+
+     public function shop(){
+      $this->load->view('Website/shop');
+    }
+     public function product_details(){
+      $this->load->view('Website/product_details');
+    }
+
+     public function checkout(){
+      $this->load->view('Website/checkout');
+    }
+
+     public function order_details(){
+      $this->load->view('Website/order_details');
+    }
+
+    public function order_tracking(){
+      $this->load->view('Website/order_tracking');
+    }
+
+    public function contact(){
+      $this->load->view('Website/contact');
+    }
+
+    public function payment(){
+      $this->load->view('Website/payment');
+    }
+
+    public function disclaimer(){
+      $this->load->view('Website/disclaimer');
+    }
+
+    public function blog(){
+      $this->load->view('Website/blog');
+    }
+
      public function terms(){
     	$this->load->view('Website/terms');
     }

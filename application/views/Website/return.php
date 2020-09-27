@@ -1,37 +1,51 @@
-<section class="default-page">
+<?php include('header.php'); ?>
+
+<section class="page-default">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="page-heading">Terms & Conditions</h1>
+        <h1 class="text-white"> Return Policy</h1>
+          <p class="text-white text-center">Home / Return Policy </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="text-section">
+<section class="page-sec-two">
   <div class="container">
     <div class="row">
-      <div class="col-md-10 offset-md-1">
-        <h4 class="text-left">Information:</h4>
-        <ul>
-          <li class="text-div">All orders for Goods shall be deemed to be an offer by the Buyer to purchase Goods pursuant to these Terms and Conditions and are subject to acceptance by the Seller. The Seller may choose not to accept or cancel an order without assigning any reason.</li>
-          <li class="text-div">Kiranabhara.com may change the terms and conditions and disclaimer set out above from time to time. By browsing this website/mobile application you are accepting that you are bound by the current terms and conditions and disclaimer and so you should check these each time you revisit the web site/Mobile application.</li>
-          <li class="text-div">Kiranabhara.com may change the format and content of this web site at any time.</li>
-          <li class="text-div">Kiranabhara.com may suspend the operation of this website/Mobile application for support or maintenance work, in order to update the content or for any other reason.</li>
-          <li class="text-div">Personal details provided to Kiranabhara.com through this website/Mobile application will only be used in accordance with our privacy policy. Please read this carefully before going on. By providing your personal details to us you are consenting to its use in accordance with our privacy policy.</li>
-          <li class="text-div">If you have a query or complaint, please contact us at kiranabhara@gmail.com. Kiranabhara.com reserves all other rights</li>
-        </ul>
-        <h4 class="text-left">Pricing:</h4>
-        <ul>
-          <li class="text-div">The Company ensures that prices for all goods offered for sale are correct. Prices can change at the time of billing as per their weights.</li>
-          <li class="text-div">To get the delivery in 24 hours the minimum bill amount should be above rs. 999 as we do not process orders below rs.999</li>
-          <li class="text-div">A customer is eligible for free shipping only if the bill amount is on & above rs.999.</li>
-          <li class="text-div">Customer support team is available from 9AM to 7PM. regarding any complaints and delivery issues contact the customer support team on-9588617281</li>
-          <li class="text-div">After receiving the delivery if you find any defect in the products please share photos within 24 hours on our Whatsapp number 9588617281 to get a replacement in the next delivery. If a customer is unable to share this, the company is not responsible for his/her replacement.</li>
-          <li class="text-div">After confirmation call by customer support team, orders would be processed.</li>
-          <li class="text-div">After placing an order on the website/Mobile application the bill amount you get is for reference. Products are billed by their weights and prices may vary.</li>
-        </ul>
-           </div>
+      <div class="terms">
+        <div class="row">
+          <div class="col-md-12">
+              <p>kolgold.com assures you the best of quality when it comes to our products. However, if you are not satisfied with your purchase for any reason; you may return the product unused, and in the same condition as you received it, in its original packaging within 7 days from the date on which these goods are delivered. We shall issue 100% refund of the cost of the product</p>
+              <p>Please note that we are not accepting any returns for stitch clothing. You need to notify us first before returning any product. You may do this through the “Contact Us” page on our web site before returning any product. Returns made without notice shall not qualify for a refund.</p>
+              <p>You may return the product to us at the below mentioned address: </p>
+              <h4>KOLGOLD.COM</h4>
+              <p>Customer can return products in below specific reasons :</p>
+              <p>1) If Wrong Product is delivered to you</p>
+              <p>2) If Demage Product is delivered to you</p>
+              <p>Customer need to inform our team within 7 Days in case of any returns. </p>
+              <p>Contact No : +91 9225136244   or email us : care@kolgold.com</p>
+              <h6>CUSTOMER SEND PRODUCTS IN BELOW ADDRESS :</h6>
+              <p>39/1 A, Near Primary Health Care Center,</p> 
+                <p>Kolhapur Airport Road Ujlaiwadi Kolhapur, Maharashtra</p>
+              <p>Mob : 91 968967 2626</p>
+              <p>Email : care@kolgold.com </p>
+              <p>Customer needs to bear the shipping costs while returning the products.</p>
+              <p>We shall not refund the shipping charges paid by you while purchasing the item.</p>
+              <p>We shall not refund the customs duties or taxes, if applicable, or paid by you at time of receiving the goods.</p>
+              <p>At any point of time, the refunds will not exceed the actual value of the goods.</p>
+              <p>Returns would not be accepted for custom made / stitched clothing, including readymade stitched sarees or sarees stitched with custom blouse. However, we would accept returns if we are believe there was any fault from our end.</p>
+              <p>Any complaint with regards to the damage or stains or stitching or any other should be reported to us within 24 hrs of the receipt of the products. We may ask for digital picture of the same in order to review the same.</p>
+              <p>In case of product return, we will issue a refund once we receive the product back at our office.</p>
+              <p>If customer paid twice for one transaction, the one transaction amount will be refunded via same source within 10 working days.</p>
+              <p>Within 10 days merchant will reviewed the damaged product received from customer and after 3 days merchant will be delivered the replacement of product.</p>
+          </div>
+        </div>
+      </div> 
     </div>
-  </div>
+  </div>      
+        
 </section>
+
+<?php include('footer.php'); ?>

@@ -1,37 +1,66 @@
-<section class="default-page">
+<?php include('header.php'); ?>
+
+<section class="page-default">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="page-heading">Terms & Conditions</h1>
+        <h1 class="text-white">Help & FAQs</h1>
+          <p class="text-white text-center">Home / Help & FAQs </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="text-section">
+<section class="page-sec-two">
   <div class="container">
     <div class="row">
-      <div class="col-md-10 offset-md-1">
-        <h4 class="text-left">Information:</h4>
-        <ul>
-          <li class="text-div">All orders for Goods shall be deemed to be an offer by the Buyer to purchase Goods pursuant to these Terms and Conditions and are subject to acceptance by the Seller. The Seller may choose not to accept or cancel an order without assigning any reason.</li>
-          <li class="text-div">Kiranabhara.com may change the terms and conditions and disclaimer set out above from time to time. By browsing this website/mobile application you are accepting that you are bound by the current terms and conditions and disclaimer and so you should check these each time you revisit the web site/Mobile application.</li>
-          <li class="text-div">Kiranabhara.com may change the format and content of this web site at any time.</li>
-          <li class="text-div">Kiranabhara.com may suspend the operation of this website/Mobile application for support or maintenance work, in order to update the content or for any other reason.</li>
-          <li class="text-div">Personal details provided to Kiranabhara.com through this website/Mobile application will only be used in accordance with our privacy policy. Please read this carefully before going on. By providing your personal details to us you are consenting to its use in accordance with our privacy policy.</li>
-          <li class="text-div">If you have a query or complaint, please contact us at kiranabhara@gmail.com. Kiranabhara.com reserves all other rights</li>
-        </ul>
-        <h4 class="text-left">Pricing:</h4>
-        <ul>
-          <li class="text-div">The Company ensures that prices for all goods offered for sale are correct. Prices can change at the time of billing as per their weights.</li>
-          <li class="text-div">To get the delivery in 24 hours the minimum bill amount should be above rs. 999 as we do not process orders below rs.999</li>
-          <li class="text-div">A customer is eligible for free shipping only if the bill amount is on & above rs.999.</li>
-          <li class="text-div">Customer support team is available from 9AM to 7PM. regarding any complaints and delivery issues contact the customer support team on-9588617281</li>
-          <li class="text-div">After receiving the delivery if you find any defect in the products please share photos within 24 hours on our Whatsapp number 9588617281 to get a replacement in the next delivery. If a customer is unable to share this, the company is not responsible for his/her replacement.</li>
-          <li class="text-div">After confirmation call by customer support team, orders would be processed.</li>
-          <li class="text-div">After placing an order on the website/Mobile application the bill amount you get is for reference. Products are billed by their weights and prices may vary.</li>
-        </ul>
-           </div>
-    </div>
-  </div>
+      <div class="terms">
+        <div class="row">
+          <div class="col-md-12">
+            <h6>Q. WHY HAVE I NOT RECEIVED MY PRODUCT YET?</h6>
+              <p>A. A few items have longer expected conveyance date. It would be ideal if you check the normal conveyance date of the item, you have requested on the site. In the event that the quantity of days is past due there may be some unexpected conditions because of which your item can't be delivered. We will send you an email or call you to educate about the such postponements. Likewise, at some point shipping organization takes longer than anticipated to convey a bundle because of specific conditions. In the event that you have gotten a following number and your item is not being conveyed please educate us by means of email/whatsapp/call, so we can assist the conveyance.</p>
+
+              <h6>Q. HOW DO I TRACK THE STATUS OF MY ORDER(S)?</h6>
+              <p>A. You can login to your account to see the present status of late requests or basically tap on the connection(Link) above which says track arrange(order). Enter your request(order) number and email Id used to arrange(order).</p>
+
+              <h6>Q. WHAT IS THE DIFFERENCE BETWEEN SHIPPING AND DELIVERY?</h6>
+              <p>A. Shipping implies the item has been dispatched from our dispatch focus. You will get an email and sms with following(tracking) number once it is sent. Since, we dispatch your item(s) with outsider transportation organization we don't have full control over conveyance(delivery). Conveyance(delivery) implies when the item is really conveyed(delivered) to you at your doorstep.</p>
+
+              <h6>Q. DO I HAVE TO PAY ANY SHIPPING OR DELIVERY CHARGES?</h6>
+              <p>A. For every single Domestic request inside India delivery is free of cost. For universal(international) request, it is INR 1000/­ for the initial two items and INR 300/­ per item a great many.</p>
+              <h6>Q. WHAT SHOULD I DO IF I FIND MY PACKAGE OPENED OR TAMPERED WITH UPON DELIVERY?</h6>
+              <p>A. Kindly don't acknowledge an open or altered bundle. Report this worry quickly to us by means of an email or call. We will take an action on it promptly and get back to you.</p>
+
+              <h6>Q. WHICH COURIER COMPANY DO YOU USE FOR DELIVERY?</h6>
+              <p>A. Inside India we utilize Fedex and Indian Speed Post administrations. For International shipments relying upon the nation shipping organization changes.</p>
+
+              <h6>Q. I WANT TO SHIP SOMETHING ABROAD. CAN I DO THAT?</h6>
+              <p>A. Yes, we send universally to selected nations. It would be ideal if you select the right sending address at the season of checkout. Worldwide transportation charges will be connected for the same.</p>
+
+              <h4>REFUNDS</h4>
+              <h6>Q. AT THE POINT WHEN WILL I GET MY REFUND?</h6>
+              <p>A. For charge(debit) card and COD exchanges it takes typically 3­4 working days to reflect in your card explanation(statement). For trade vouchers we send the email inside 24­48 hours once we have gotten the item back in our stockroom(warehouse).</p>
+
+              <h6>Q. HOW DO I RETURN OR REPLACE A PRODUCT?</h6>
+              <p>A. Essentially tap on the connection(link) saying return/supplant(replace). Enter your request(order) number and enlisted email id. You will see the achievement(success) message. This shows discount(refund) has been started(initiated). We will answer inside 1 working day to your demand with an email and return pressing slip. Simply utilize that pressing slip to send the item back to us through Fedex. Recall that you have to drop off the bundle at the closest fedex area specified in the email.</p>
+
+              <h6>Q. I DO NOT HAVE FEDEX LOCATION NEARBY? WHAT SHOULD I DO?</h6>
+              <p>A. No stresses. We will organize a pickup for you. Be that as it may, we can't ensure the switch pickup promptly. On the off chance that the pickup is not done resulting day compassionately orchestrate to send the item back to us by means of some other courier service (Professional, DTDC, India Post and so on..). We will re­imburse upto INR 100/­ per Kg into your record. It would be ideal if you send the dispatch receipt to support@kalapuri.com</p>
+
+              <h6>Q. HOW DO I CANCEL MY ORDER?</h6>
+              <p>A. Just tap on the connection(link) above. Enter your subtle elements(detail). In the event that your item has not been delivered from our distribution center it can be scratched off promptly. On the off chance that it has been dispatched please contact our client bolster(customer support) for cancellation.</p>
+
+              <h6>Q. WHAT DO I DO IF I RECEIVE WRONG/DAMAGED PRODUCT?</h6>
+              <p>A. Just start an arrival ask for and send the photo of harmed item or wrong item to support@kalapuri.com. Once our group confirms that item is harmed we will give the full discount back to you. No inquiries required. You will requested the NEFT bank details of interest to which the cash will be discounted. For NEFT we require taking after points of interest</p>
+
+              <p>Account Name</p>
+              <p>IFSC Code</p>
+              <p>Bank Name</p>
+              <p>Account Number</p>
+          </div>
+        </div>
+      </div>      
+        
 </section>
+
+<?php include('footer.php'); ?>
