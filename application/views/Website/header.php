@@ -37,7 +37,7 @@
                 <a class="nav-link" href="<?php echo base_url(); ?>Shop">Shop</a>
               </li>
                <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="<?php echo base_url(); ?>Blog">Blog</a>
               </li>
                <li class="nav-item">
                 <a class="nav-link" href="#">Contact Us</a>

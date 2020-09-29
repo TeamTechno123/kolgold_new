@@ -46,6 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $this->load->view('Website/order_tracking');
     }
 
+    
     public function contact(){
       $this->load->view('Website/contact');
     }
