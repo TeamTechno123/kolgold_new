@@ -25,11 +25,11 @@
       </div>
     </section>
 
-  <section class="home-nav">   
-    <div class="row">
+  <section class="home-nav " >   
+    <div class="row" id="scrollmenu">
       <div class="col-md-5">    
         <div class="nav-main">
-         <nav class="navbar navbar-expand-lg navbar-light ">
+         <nav class="navbar navbar-expand-lg navbar-light  ">
         <!--   <a class="navbar-brand" href="<?php echo base_url(); ?>"> <img src="<?php echo base_url(); ?>assets/images/website/logo.png"> </a> -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,18 +37,20 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<?php echo base_url(); ?>">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Featured Product</a>
+                <a class="nav-link" href="<?php echo base_url(); ?>About-Us">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Category</a>
+                <a class="nav-link" href="<?php echo base_url(); ?>Shop">Shop</a>
               </li>
                <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="<?php echo base_url(); ?>Blog">Blog</a>
               </li>
-              
+               <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url(); ?>Contact-Us">Contact Us</a>
+              </li>                 
             </ul>
           </div>
         </nav>
@@ -59,8 +61,8 @@
           <img class="logo " src="<?php echo base_url(); ?>assets/images/website/logo.png" width="100%">
        </div>
 
-       <div class="col-md-5">
-          <p class="login"> <span class="f-14 text-grey"> Login / Register </span> <span class="ml-2 f-20"><i class="far fa-heart"></i></span> <span class="ml-2 f-20"> <i class="fas fa-search f-16"></i>  </span> <span class="ml-2 f-20"> <i class="fas fa-cart-plus"></i></span><span class="f-14 ml-2"> <i class="fas fa-rupee-sign"></i> 0.00 </span> </p> 
+      <div class="col-md-5">
+          <p class="login mt-3 text-center"> <span class="f-14 text-grey" data-toggle="modal" data-target="#exampleModal" >  Login / Register</span> <span class="ml-2 f-20"><i class="far fa-heart"></i></span> <span class="ml-2 f-20"> <i class="fas fa-search f-16"></i>  </span> <span class="ml-2 f-20"> <i class="fas fa-cart-plus"></i></span><span class="f-14 ml-2"> <i class="fas fa-rupee-sign"></i> 0.00 </span> </p> 
        </div>
     </div>  
 
@@ -898,6 +900,18 @@ $(this).removeClass("active");
 }
 $(this).addClass("active");
 
+});
+    </script>
+
+    <script type="text/javascript">
+      $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 500) {
+        $("#scrollmenu").addClass("sticky");
+    } else {
+        $("#scrollmenu").removeClass("sticky");
+    }
 });
     </script>
   </body>

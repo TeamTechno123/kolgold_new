@@ -17,7 +17,7 @@
   <body>
 
   <section class="sub-nav">   
-    <div class="row">
+    <div class="row" id="scrollmenu">
       <div class="col-md-5">    
         <div class="nav-main">
          <nav class="navbar navbar-expand-lg navbar-light ">
@@ -31,7 +31,7 @@
                 <a class="nav-link" href="<?php echo base_url(); ?>">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="<?php echo base_url(); ?>About-Us">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url(); ?>Shop">Shop</a>
@@ -40,7 +40,7 @@
                 <a class="nav-link" href="<?php echo base_url(); ?>Blog">Blog</a>
               </li>
                <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="<?php echo base_url(); ?>Contact-Us">Contact Us</a>
               </li>              
             </ul>
           </div>

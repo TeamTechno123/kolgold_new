@@ -304,5 +304,16 @@ $(this).addClass("active");
 
 });
     </script>
+     <script type="text/javascript">
+      $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 500) {
+        $("#scrollmenu").addClass("sticky");
+    } else {
+        $("#scrollmenu").removeClass("sticky");
+    }
+});
+    </script>
   </body>
 </html>

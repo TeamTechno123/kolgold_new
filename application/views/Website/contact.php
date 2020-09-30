@@ -40,20 +40,20 @@
               <h4 class="f-22 font-Signika bb-1 pb-2 w-100">Contact Us</h4> 
               <p>Whether you’re looking for answers, would like to solve a problem, or just want to let us know how we did, you’ll find.</p>   
                <!-- Button trigger modal -->     
-              <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">Write A Message</button>
+              <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal1">Write A Message</button>
 
             </div>
                         
           </div>
 
           <div class="col-md-7">
-            <div class="mapouter mt-5 ml-2 d-none d-sm-block"><div class="gmap_canvas"><iframe width="700" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Building%20no%20339%2F1%20A%20Near%20Primary%20Health%20care%20center%2C%20Kolhapur%20airport%20road%2CUjalaiwadi%2C%20Kolhapur%2C%20Maharashtra%2C%20India%20%E2%80%93%20416004&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.org">embed google map</a></div><style>.mapouter{position:relative;text-align:right;height:400px;width:700px;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:700px;}</style></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15288.778638135238!2d74.2704631!3d16.6671397!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfbdfb721619e37fa!2sKOLGOLD!5e0!3m2!1sen!2sin!4v1601441209737!5m2!1sen!2sin" width="700" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
 
 
           <div class="row">
             <!-- Modal -->
-              <div class="modal fade w-100" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade w-100" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">

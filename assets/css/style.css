@@ -13,6 +13,17 @@ body{
     margin: 0px!important;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding-top: 10px!important;
+  padding-bottom: 10px!important;
+  background-color: #fff;
+}
+
+
 .inline{
   display: inline-block!important;
 }
