@@ -48,6 +48,7 @@
 
               <div class="product">
                 <h4 class="f-18 bb-1 pb-2 mb-3" >PRODUCTS</h4>
+                <a href="#">
                 <div class="row">
                   <div class="col-4">
                     <img class="p-0 mb-3" src="<?php echo base_url(); ?>assets/images/website/small_blog.jpg" width="100%">
@@ -57,6 +58,7 @@
                      <p class="f-10"> Date : 22/06/2017 <span class="ml-2">No Comments</span> </p>
                   </div>
                 </div>
+                </a>
 
                <div class="row">
                   <div class="col-4">

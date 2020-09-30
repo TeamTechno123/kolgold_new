@@ -25,11 +25,10 @@
 
 				<div class="menu">
 				<div class="row">
-					
 					<div class="col-md-4 text-center">
-					<a href="">
-						<p> <i class="fas fa-clipboard-list f-60"></i> </p>
-						<h4>Order</h4>
+					<a class="m-center" href="">
+						<p class="m-center" > <i class="fas fa-clipboard-list f-60 text-center"></i> </p>
+						<h4 class="m-center">Order</h4>
 					</a>
 					</div>
 			

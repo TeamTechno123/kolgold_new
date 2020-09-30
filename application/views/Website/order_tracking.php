@@ -12,8 +12,8 @@
   </div>
 </section>
 
-<section class="profile-container d-none d-sm-block">
-  <div class="container">
+<section class="profile-container ">
+  <div class="container d-none d-sm-block">
     <div class="row ">
       <div class="col-md-12">
         <div class="card py-5 ">
@@ -29,6 +29,53 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="container mobiletrack d-block d-sm-none">
+    <div class="timeline-block timeline-block-right">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>Order Confirmed</h3>
+         <span></span>
+         <p></p>
+      </div>
+   </div>
+
+   <div class="timeline-block timeline-block-left">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>Order Placed</h3>
+         <span></span>
+         <p></p>
+      </div>
+   </div>
+
+   <div class="timeline-block timeline-block-right">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3 class="text-success">Order Received</h3>
+         <span class="text-success">Your Order Recived By Courier Station Pune </span>
+         <p></p>
+      </div>
+   </div>
+
+   <div class="timeline-block timeline-block-left">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>Order-Processing</h3>
+         <span></span>
+         <p></p>
+      </div>
+   </div>
+
+   <div class="timeline-block timeline-block-right">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>Delivered</h3>
+         <span></span>
+         <p></p>
+      </div>
+   </div>
   </div>
 </section>
 

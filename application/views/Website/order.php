@@ -18,7 +18,6 @@
 				<?php include('account_menu.php'); ?>
 			</div>
 			<div class="col-md-9">
-
 				<div class="table">
 					<table class="table">
 					  <thead>
