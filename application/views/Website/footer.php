@@ -36,10 +36,10 @@
           </div>
 
           <div class="row" id="company">
-            <div class="col-md-3">                     
-                      <img class="footer-img mt-2" src="<?php echo base_url(); ?>assets/images/website/logo.png"> 
+            <div class="col-md-3 m-center">                     
+                      <img class="footer-img mt-2 " src="<?php echo base_url(); ?>assets/images/website/logo.png"> 
 
-                      <p>39/1 A, Near Primary Health Care Center,  Kolhapur Airport Road Ujlaiwadi Kolhapur, Maharashtra </p>  
+                      <p class="m-center">39/1 A, Near Primary Health Care Center,  Kolhapur Airport Road Ujlaiwadi Kolhapur, Maharashtra </p>  
 
                       <p class="mt-2"> <span><i class="fas fa-phone-square-alt f-30"></i> </span> +91 968967 2626 </p>
                       <p> <span><i class="fas fa-phone-square-alt f-30"></i> </span> +91 968967 2626 </p>
@@ -48,7 +48,7 @@
             </div>
             <div class="col-md-9">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 col-6">
                       <h4>Information</h4>
                      <ul>
                        <li><a href="<?php echo base_url(); ?>About-Us">About</a></li>
@@ -60,7 +60,7 @@
                      </ul>
             </div>
 
-             <div class="col-md-3">
+             <div class="col-md-3 col-6">
                       <h4>Policies</h4>
                      <ul>
                        <li> <a href="<?php echo base_url(); ?>Privacy-Policy"> Privacy  Policy </a></li>
@@ -69,7 +69,7 @@
                       <li><a href="<?php echo base_url(); ?>Terms-condition">Terms & Condition</a> </li>            </ul>
             </div>
 
-             <div class="col-md-3">
+             <div class="col-md-3 col-6">
                       <h4>My Account</h4>
                      <ul>
                        <li> <a href="<?php echo base_url(); ?>website/my_account"> My Account</a></li>
@@ -82,7 +82,7 @@
                      </ul>
                 </div>
 
-                 <div class="col-md-3">
+                 <div class="col-md-3 col-6">
                       <h4>My Account</h4>
                      <ul>
                        <li>My Account</li>

@@ -40,14 +40,14 @@
               <h4 class="f-22 font-Signika bb-1 pb-2 w-100">Contact Us</h4> 
               <p>Whether you’re looking for answers, would like to solve a problem, or just want to let us know how we did, you’ll find.</p>   
                <!-- Button trigger modal -->     
-              <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal1">Write A Message</button>
+              <button type="button" class="btn btn-outline-success mmb-3" data-toggle="modal" data-target="#exampleModal1">Write A Message</button>
 
             </div>
                         
           </div>
 
           <div class="col-md-7">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15288.778638135238!2d74.2704631!3d16.6671397!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfbdfb721619e37fa!2sKOLGOLD!5e0!3m2!1sen!2sin!4v1601441209737!5m2!1sen!2sin" width="700" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15288.778638135238!2d74.2704631!3d16.6671397!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfbdfb721619e37fa!2sKOLGOLD!5e0!3m2!1sen!2sin!4v1601441209737!5m2!1sen!2sin" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
 
 
@@ -101,9 +101,9 @@
                                 </div>
                             </div>
 
-                           <div class="modal-footer text-left">
-                    <button type="button" class="btn btn-outline-secondary">Send</button>
-                    </div>
+                      <div class="modal-footer text-left">
+                        <button type="button" class="btn btn-outline-secondary">Send</button>
+                        </div>
                           </div>
 
                         </div>

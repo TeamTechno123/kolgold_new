@@ -18,15 +18,15 @@
 
   <section class="sub-nav">   
     <div class="row" id="scrollmenu">
-      <div class="col-md-5">    
+      <div class="col-md-5 col-12">    
         <div class="nav-main">
          <nav class="navbar navbar-expand-lg navbar-light ">
-        <!--   <a class="navbar-brand" href="<?php echo base_url(); ?>"> <img src="<?php echo base_url(); ?>assets/images/website/logo.png"> </a> -->
+          <a class="navbar-brand d-block d-sm-none" href="<?php echo base_url(); ?>"> <img src="<?php echo base_url(); ?>assets/images/website/logo.png"> </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto navbar-mobile">
               <li class="nav-item active">
                 <a class="nav-link" href="<?php echo base_url(); ?>">Home <span class="sr-only">(current)</span></a>
               </li>
@@ -48,13 +48,13 @@
       </div>
        </div>
 
-       <div class="col-md-2">
+       <div class="col-md-2 d-none d-sm-block">
           <img class="logo " src="<?php echo base_url(); ?>assets/images/website/logo.png" width="100%">
        </div>
 
-       <div class="col-md-5">
+       <div class="col-md-5 d-none d-sm-block">
           <p class="login mt-3 text-center"> <span class="f-14 text-grey" data-toggle="modal" data-target="#exampleModal" >  Login / Register</span> <span class="ml-2 f-20"><i class="far fa-heart"></i></span> <span class="ml-2 f-20"> <i class="fas fa-search f-16"></i>  </span> <span class="ml-2 f-20"> <i class="fas fa-cart-plus"></i></span><span class="f-14 ml-2"> <i class="fas fa-rupee-sign"></i> 0.00 </span> </p> 
-       </div>
+       </div>      
     </div>
        
     </section>

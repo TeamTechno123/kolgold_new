@@ -7,19 +7,19 @@
         <h1 class="text-white"> Shop</h1>        
           <p class="text-white text-center">Home / Shop </p>
       </div>
-      <div class="col-md-3 text-center">
+      <div class="col-md-3 text-center d-none d-sm-block">
         <h6 class="text-white">KOLHAPURI CHAPPAL</h6>
         <p class="text-white">0 Products</p>
       </div>
-       <div class="col-md-3 text-center">
+       <div class="col-md-3 text-center d-none d-sm-block">
         <h6 class="text-white">KOLHAPURI CHAPPAL</h6>
         <p class="text-white">0 Products</p>
       </div>
-       <div class="col-md-3 text-center">
+       <div class="col-md-3 text-center d-none d-sm-block">
         <h6 class="text-white">KOLHAPURI CHAPPAL</h6>
         <p class="text-white">0 Products</p>
       </div>
-       <div class="col-md-3 text-center">
+       <div class="col-md-3 text-center d-none d-sm-block">
         <h6 class="text-white">KOLHAPURI CHAPPAL</h6>
         <p class="text-white">0 Products</p>
       </div>
@@ -30,7 +30,7 @@
 <section class="page-sec-product">
   <div class="container">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 d-none d-sm-block">
               <ul class="category-menu">
                 <h4 class="f-18">CATEGORIES</h4>
                 <li> <a href="#">Kolhapuri Chappal</a></li>
@@ -101,7 +101,7 @@
                   <h4 class="f-14">Show 9 / 24 / 36 </h4>
                 </div> -->
                 
-                <div class="col-md-4 text-right mb-3"> 
+                <div class="col-md-4 text-right mb-3 d-none d-sm-block"> 
                 <span class="mr-2" > Show 9/24/36</span>              
                   <span class="ml-2">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px" height="19px" viewBox="0 0 19 19" enable-background="new 0 0 19 19" xml:space="preserve">
