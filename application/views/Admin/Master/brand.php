@@ -26,7 +26,7 @@
                   <?php if(!isset($update)){
                     echo '<button type="button" class="btn btn-sm btn-primary" data-card-widget="collapse">Add New</button>';
                   } else{
-                    echo '<a href="'.base_url().'Master/tax_rate" type="button" class="btn btn-sm btn-outline-info" >Cancel Update</a>';
+                    echo '<a href="'.base_url().'Master/brand" type="button" class="btn btn-sm btn-outline-info" >Cancel Update</a>';
                   } ?>
                 </div>
               </div>
@@ -41,30 +41,46 @@
 
                       <div class="form-group col-md-12">
                         <label>Enter Description</label>
-                        <textarea class="form-control form-control-sm" rows="3" name="company_address" id="company_address" placeholder="Enter Description" required> </textarea>
-                  </div>
+                        <textarea class="form-control form-control-sm" rows="3" name="brand_descr" id="brand_descr" placeholder="Enter Description" required><?php if(isset($brand_info)){ echo $brand_info['brand_descr']; } ?></textarea>
+                      </div>
 
-                   <div class="form-group col-md-6">
-                      <label>Brand Logo </label>
-                      <input type="file" class="form-control form-control-sm" name="brand_logo" id="brand_logo" >
-                    </div>
+                      <div class="form-group col-md-4">
+                        <label>Brand Logo</label>
+                        <input type="file" class="form-control form-control-sm valid_image" name="brand_logo" id="brand_logo" >
+                          <label>.jpg/.jpeg/.png file. Size less than 500kb.</label>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <?php if(isset($brand_info) && $brand_info['brand_logo']){ ?>
+                          <img width="150px" src="<?php echo base_url() ?>assets/images/brand/<?php echo $brand_info['brand_logo'];  ?>" alt="Brand Logo">
+                          <input type="hidden" name="old_brand_logo" value="<?php echo $brand_info['brand_logo']; ?>">
+                        <?php } ?>
+                      </div>
+                      <div class="col-md-4">
+                      </div>
 
-                     <div class="form-group col-md-6">
-                      <label>Brand Banner </label>
-                      <input type="file" class="form-control form-control-sm" name="brand_banner" id="brand_banner" >
-                    </div>
-                     
+                      <div class="form-group col-md-4">
+                        <label>Brand Banner</label>
+                        <input type="file" class="form-control form-control-sm valid_image" name="brand_image" id="brand_image" >
+                          <label>.jpg/.jpeg/.png file. Size less than 500kb.</label>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <?php if(isset($brand_info) && $brand_info['brand_image']){ ?>
+                          <img width="150px" src="<?php echo base_url() ?>assets/images/brand/<?php echo $brand_info['brand_image'];  ?>" alt="Brand Banner">
+                          <input type="hidden" name="old_brand_image" value="<?php echo $brand_info['brand_image']; ?>">
+                        <?php } ?>
+                      </div>
+
                     </div>
                     <div class="card-footer clearfix" style="display: block;">
                       <div class="row">
                         <div class="col-md-6 text-left">
                           <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="tax_rate_status" id="tax_rate_status" value="0" <?php if(isset($tax_rate_info) && $tax_rate_info['tax_rate_status'] == 0){ echo 'checked'; } ?>>
-                            <label for="tax_rate_status" class="custom-control-label">Disable This Brand</label>
+                            <input class="custom-control-input" type="checkbox" name="brand_status" id="brand_status" value="0" <?php if(isset($brand_info) && $brand_info['brand_status'] == 0){ echo 'checked'; } ?>>
+                            <label for="brand_status" class="custom-control-label">Disable This Brand</label>
                           </div>
                         </div>
                         <div class="col-md-6 text-right">
-                          <a href="<?php base_url(); ?>brand" class="btn btn-sm btn-default px-4 mx-4">Cancel</a>
+                          <a href="<?php echo base_url(); ?>Master/brand" class="btn btn-sm btn-default px-4 mx-4">Cancel</a>
                           <?php if(isset($update)){
                             echo '<button class="btn btn-sm btn-primary float-right px-4">Update</button>';
                           } else{
@@ -91,29 +107,28 @@
                     <th class="d-none">#</th>
                     <th class="wt_50">Action</th>
                     <th>Brand Name</th>
-                    <th>Logo</th>
-                    <th>Banner</th>
+                    <th class="wt_50">Logo</th>
+                    <th class="wt_50">Banner</th>
                     <th class="wt_50">Status</th>
                   </tr>
                   </thead>
                   <tbody>
-                    <?php if(isset($tax_rate_list)){
-                     $i=0; foreach ($tax_rate_list as $list) { $i++;
+                    <?php if(isset($brand_list)){
+                     $i=0; foreach ($brand_list as $list) { $i++;
                     ?>
                     <tr>
                       <td class="d-none"><?php echo $i; ?></td>
                       <td class="text-center">
-                        <div class="btn-tax_rate">
-                          <a href="<?php echo base_url() ?>Master/edit_tax_rate/<?php echo $list->tax_rate_id; ?>" type="button" class="btn btn-sm btn-default"><i class="fa fa-edit text-primary"></i></a>
-                          <a href="<?php echo base_url() ?>Master/delete_tax_rate/<?php echo $list->tax_rate_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this Brand Information');"><i class="fa fa-trash text-danger"></i></a>
+                        <div class="btn-brand">
+                          <a href="<?php echo base_url() ?>Master/edit_brand/<?php echo $list->brand_id; ?>" type="button" class="btn btn-sm btn-default"><i class="fa fa-edit text-primary"></i></a>
+                          <a href="<?php echo base_url() ?>Master/delete_brand/<?php echo $list->brand_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this Brand Information');"><i class="fa fa-trash text-danger"></i></a>
                         </div>
                       </td>
-                      <td><?php echo $list->tax_rate_name; ?></td>
-                      <td><?php echo $list->tax_rate_per; ?></td>
-                      <td><?php echo $list->tax_rate_per; ?></td>
-                      <td><?php echo $list->tax_rate_per; ?></td>
+                      <td><?php echo $list->brand_name; ?></td>
+                      <td class="text-center"><img width="50px" src="<?php echo base_url() ?>assets/images/brand/<?php echo $list->brand_logo;  ?>" alt="Brand Logo">
+                      <td class="text-center"><img width="50px" src="<?php echo base_url() ?>assets/images/brand/<?php echo $list->brand_image;  ?>" alt="Brand Image">
                       <td>
-                        <?php if($list->tax_rate_status == 0){ echo '<span class="text-danger">Inactive</span>'; }
+                        <?php if($list->brand_status == 0){ echo '<span class="text-danger">Inactive</span>'; }
                           else{ echo '<span class="text-success">Active</span>'; } ?>
                       </td>
                     </tr>

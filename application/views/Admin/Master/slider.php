@@ -9,7 +9,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-12 text-left mt-2">
-            <h4>Slider Informaiton</h4>
+            <h4>Slider</h4>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
                   <?php if(!isset($update)){
                     echo '<button type="button" class="btn btn-sm btn-primary" data-card-widget="collapse">Add New</button>';
                   } else{
-                    echo '<a href="'.base_url().'Master/tax_rate" type="button" class="btn btn-sm btn-outline-info" >Cancel Update</a>';
+                    echo '<a href="'.base_url().'Master/slider" type="button" class="btn btn-sm btn-outline-info" >Cancel Update</a>';
                   } ?>
                 </div>
               </div>
@@ -35,35 +35,39 @@
                   <form class="input_form m-0" id="form_action" role="form" action="" method="post" autocomplete="off" enctype="multipart/form-data">
                     <div class="row p-4">
                       <div class="form-group col-md-6 offset-md-3 select_sm">
-                        <label>Select Slider Position</label>
-                        <select class="form-control select2" name="country_id" id="country_id" data-placeholder="Select Slider Position" required>
-                          <option value="">1</option>                       
-                          </select>
+                        <label>Slider Position</label>
+                        <select class="form-control select2" name="slider_possition" id="slider_possition" data-placeholder="Select Slider Position" required>
+                          <option value="">Select Slider Position</option>
+                          <option value="1" <?php if(isset($slider_info) && $slider_info['slider_possition'] == '1'){ echo 'selected'; } ?>>Position 1</option>
+                        </select>
                       </div>
-
                       <div class="form-group col-md-12 ">
                         <label>Enter Slider Name</label>
                         <input type="text" class="form-control form-control-sm" name="slider_name" id="slider_name" value="<?php if(isset($slider_info)){ echo $slider_info['slider_name']; } ?>" placeholder="Enter slider Name" required>
                       </div>
-
                       <div class="form-group col-md-12">
                         <label>Enter Description</label>
-                        <textarea class="form-control form-control-sm" rows="3" name="company_address" id="company_address" placeholder="Enter Description" required> </textarea>
-                  </div>
+                        <textarea class="form-control form-control-sm" rows="3" name="slider_descr" id="slider_descr" placeholder="Enter Description" ><?php if(isset($slider_info)){ echo $slider_info['slider_descr']; } ?></textarea>
+                      </div>
 
-              
-                     <div class="form-group col-md-6">
-                      <label>Slider image </label>
-                      <input type="file" class="form-control form-control-sm" name="slider_banner" id="slider_banner" >
-                    </div>
-                     
+                      <div class="form-group col-md-4">
+                        <label>Slider Image</label>
+                        <input type="file" class="form-control form-control-sm valid_image" name="slider_image" id="slider_image" >
+                          <label>.jpg/.jpeg/.png file. Size less than 500kb.</label>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <?php if(isset($slider_info) && $slider_info['slider_image']){ ?>
+                          <img width="150px" src="<?php echo base_url() ?>assets/images/slider/<?php echo $slider_info['slider_image'];  ?>" alt="Slider Image">
+                          <input type="hidden" name="old_slider_image" value="<?php echo $slider_info['slider_image']; ?>">
+                        <?php } ?>
+                      </div>
                     </div>
                     <div class="card-footer clearfix" style="display: block;">
                       <div class="row">
                         <div class="col-md-6 text-left">
                           <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="tax_rate_status" id="tax_rate_status" value="0" <?php if(isset($tax_rate_info) && $tax_rate_info['tax_rate_status'] == 0){ echo 'checked'; } ?>>
-                            <label for="tax_rate_status" class="custom-control-label">Disable This slider</label>
+                            <input class="custom-control-input" type="checkbox" name="slider_status" id="slider_status" value="0" <?php if(isset($slider_info) && $slider_info['slider_status'] == 0){ echo 'checked'; } ?>>
+                            <label for="slider_status" class="custom-control-label">Disable This slider</label>
                           </div>
                         </div>
                         <div class="col-md-6 text-right">
@@ -95,28 +99,27 @@
                     <th class="wt_50">Action</th>
                     <th>Slider Name</th>
                     <th>Slider Position</th>
-                    <th>Slider Image</th>                    
+                    <th class="wt_50">Image</th>
                     <th class="wt_50">Status</th>
                   </tr>
                   </thead>
                   <tbody>
-                    <?php if(isset($tax_rate_list)){
-                     $i=0; foreach ($tax_rate_list as $list) { $i++;
+                    <?php if(isset($slider_list)){
+                     $i=0; foreach ($slider_list as $list) { $i++;
                     ?>
                     <tr>
                       <td class="d-none"><?php echo $i; ?></td>
                       <td class="text-center">
-                        <div class="btn-tax_rate">
-                          <a href="<?php echo base_url() ?>Master/edit_tax_rate/<?php echo $list->tax_rate_id; ?>" type="button" class="btn btn-sm btn-default"><i class="fa fa-edit text-primary"></i></a>
-                          <a href="<?php echo base_url() ?>Master/delete_tax_rate/<?php echo $list->tax_rate_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this slider Information');"><i class="fa fa-trash text-danger"></i></a>
+                        <div class="btn-slider">
+                          <a href="<?php echo base_url() ?>Master/edit_slider/<?php echo $list->slider_id; ?>" type="button" class="btn btn-sm btn-default"><i class="fa fa-edit text-primary"></i></a>
+                          <a href="<?php echo base_url() ?>Master/delete_slider/<?php echo $list->slider_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this slider Information');"><i class="fa fa-trash text-danger"></i></a>
                         </div>
                       </td>
-                      <td><?php echo $list->tax_rate_name; ?></td>
-                      <td><?php echo $list->tax_rate_per; ?></td>
-                      <td><?php echo $list->tax_rate_per; ?></td>
-                      <td><?php echo $list->tax_rate_per; ?></td>
+                      <td><?php echo $list->slider_name; ?></td>
+                      <td><?php echo $list->slider_possition; ?></td>
+                      <td class="text-center"><img width="50px" src="<?php echo base_url() ?>assets/images/slider/<?php echo $list->slider_image;  ?>" alt="Slider Image">
                       <td>
-                        <?php if($list->tax_rate_status == 0){ echo '<span class="text-danger">Inactive</span>'; }
+                        <?php if($list->slider_status == 0){ echo '<span class="text-danger">Inactive</span>'; }
                           else{ echo '<span class="text-success">Active</span>'; } ?>
                       </td>
                     </tr>

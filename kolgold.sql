@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2020 at 02:35 PM
+-- Generation Time: Oct 01, 2020 at 09:31 AM
 -- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- PHP Version: 7.3.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -6175,6 +6175,117 @@ INSERT INTO `district` (`district_id`, `country_id`, `state_id`, `district_name`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kol_blog`
+--
+
+CREATE TABLE `kol_blog` (
+  `blog_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `blog_mcategory_id` int(11) NOT NULL,
+  `blog_scategory_id` int(11) NOT NULL,
+  `blog_name` varchar(350) NOT NULL,
+  `blog_descr` text NOT NULL,
+  `blog_image` varchar(250) NOT NULL,
+  `blog_status` int(11) NOT NULL DEFAULT 1,
+  `blog_addedby` int(11) DEFAULT 1,
+  `blog_created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `blog_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kol_blog`
+--
+
+INSERT INTO `kol_blog` (`blog_id`, `company_id`, `blog_mcategory_id`, `blog_scategory_id`, `blog_name`, `blog_descr`, `blog_image`, `blog_status`, `blog_addedby`, `blog_created_at`, `blog_updated_at`) VALUES
+(2, 1, 1, 2, 'sdfgsdfg', '<p>sdfg sdfgsdfg</p>', 'blog_image_2_1601537329.jpg', 1, 1, '2020-10-01 12:58:49', '2020-10-01 07:28:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kol_blog_category`
+--
+
+CREATE TABLE `kol_blog_category` (
+  `blog_category_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `is_main` int(11) NOT NULL,
+  `main_blog_category_id` int(11) NOT NULL,
+  `blog_category_name` varchar(350) NOT NULL,
+  `blog_category_descr` text NOT NULL,
+  `blog_category_image` varchar(250) NOT NULL,
+  `blog_category_logo` varchar(250) NOT NULL,
+  `blog_category_status` int(11) NOT NULL DEFAULT 1,
+  `blog_category_addedby` int(11) DEFAULT 1,
+  `blog_category_created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `blog_category_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kol_blog_category`
+--
+
+INSERT INTO `kol_blog_category` (`blog_category_id`, `company_id`, `is_main`, `main_blog_category_id`, `blog_category_name`, `blog_category_descr`, `blog_category_image`, `blog_category_logo`, `blog_category_status`, `blog_category_addedby`, `blog_category_created_at`, `blog_category_updated_at`) VALUES
+(1, 1, 1, 0, 'Demo Blog Main', 'cfgjg', 'blog_category_image_1_1601537050.jpg', 'blog_category_logo_1_1601537049.jpg', 1, 1, '2020-10-01 12:54:09', '2020-10-01 07:24:10'),
+(2, 1, 0, 1, 'Sub Blog Type', 'dhfgh', 'blog_category_image_2_1601537074.jpeg', 'blog_category_logo_2_1601537074.jpeg', 1, 1, '2020-10-01 12:54:33', '2020-10-01 07:24:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kol_brand`
+--
+
+CREATE TABLE `kol_brand` (
+  `brand_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `brand_name` varchar(250) NOT NULL,
+  `brand_descr` text NOT NULL,
+  `brand_logo` varchar(350) NOT NULL,
+  `brand_image` varchar(350) NOT NULL,
+  `brand_status` int(11) NOT NULL DEFAULT 1,
+  `brand_addedby` int(11) DEFAULT 1,
+  `brand_created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `brand_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kol_brand`
+--
+
+INSERT INTO `kol_brand` (`brand_id`, `company_id`, `brand_name`, `brand_descr`, `brand_logo`, `brand_image`, `brand_status`, `brand_addedby`, `brand_created_at`, `brand_updated_at`) VALUES
+(3, 1, 'dhdfgh dfgh', 'dfgh dfghdfgh', 'brand_logo_3_1601466475.png', 'brand_image_3_1601466475.jpg', 1, 1, '2020-09-30 17:08:10', '2020-09-30 11:47:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kol_coupon`
+--
+
+CREATE TABLE `kol_coupon` (
+  `coupon_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `coupon_code` varchar(350) NOT NULL,
+  `coupon_descr` text NOT NULL,
+  `coupon_type` int(11) NOT NULL,
+  `coupon_disc_value` double NOT NULL,
+  `coupon_per_user` int(11) NOT NULL,
+  `coupon_exp_date` varchar(25) NOT NULL,
+  `coupon_image` varchar(250) NOT NULL,
+  `coupon_status` int(11) NOT NULL DEFAULT 1,
+  `coupon_addedby` int(11) DEFAULT 1,
+  `coupon_created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `coupon_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kol_coupon`
+--
+
+INSERT INTO `kol_coupon` (`coupon_id`, `company_id`, `coupon_code`, `coupon_descr`, `coupon_type`, `coupon_disc_value`, `coupon_per_user`, `coupon_exp_date`, `coupon_image`, `coupon_status`, `coupon_addedby`, `coupon_created_at`, `coupon_updated_at`) VALUES
+(1, 1, 'ASDF123', 'hfgh dfghdfgh', 1, 5, 10, '31-12-2020', 'coupon_image_1_1601530536.jpg', 1, 1, '2020-10-01 11:05:36', '2020-10-01 05:35:36');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `kol_customer`
 --
 
@@ -6218,6 +6329,101 @@ INSERT INTO `kol_customer` (`customer_id`, `company_id`, `customer_name`, `custo
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kol_gst_slab`
+--
+
+CREATE TABLE `kol_gst_slab` (
+  `gst_slab_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `gst_slab_name` varchar(250) NOT NULL,
+  `gst_slab_per` double NOT NULL,
+  `gst_slab_status` int(11) NOT NULL DEFAULT 1,
+  `gst_slab_addedby` int(11) NOT NULL,
+  `gst_slab_created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `gst_slab_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kol_gst_slab`
+--
+
+INSERT INTO `kol_gst_slab` (`gst_slab_id`, `company_id`, `gst_slab_name`, `gst_slab_per`, `gst_slab_status`, `gst_slab_addedby`, `gst_slab_created_at`, `gst_slab_updated_at`) VALUES
+(1, 1, 'GST 0%', 0, 1, 1, '2020-08-09 11:10:58', '2020-09-08 07:16:30'),
+(2, 1, 'GST 5%', 5, 1, 1, '2020-09-20 12:10:40', '2020-10-01 06:07:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kol_product`
+--
+
+CREATE TABLE `kol_product` (
+  `product_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `product_name` varchar(350) NOT NULL,
+  `product_mcategory_id` int(11) NOT NULL,
+  `product_scategory_id` int(11) NOT NULL,
+  `brand_id` int(11) NOT NULL,
+  `unit_id` int(11) NOT NULL,
+  `gst_slab_id` int(11) NOT NULL,
+  `product_stock_status` int(11) NOT NULL,
+  `product_hsn` varchar(350) NOT NULL,
+  `product_sku` varchar(350) NOT NULL,
+  `product_weight` double NOT NULL,
+  `product_dimension` varchar(350) NOT NULL,
+  `product_mrp_inr` double NOT NULL,
+  `product_price_inr` double NOT NULL,
+  `product_mrp_usd` double NOT NULL,
+  `product_price_usd` double NOT NULL,
+  `product_descr` text NOT NULL,
+  `product_image` varchar(250) NOT NULL,
+  `product_featured` int(11) NOT NULL DEFAULT 0,
+  `product_video_url` varchar(350) NOT NULL,
+  `product_status` int(11) NOT NULL DEFAULT 1,
+  `product_addedby` int(11) DEFAULT 1,
+  `product_created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `product_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kol_product`
+--
+
+INSERT INTO `kol_product` (`product_id`, `company_id`, `product_name`, `product_mcategory_id`, `product_scategory_id`, `brand_id`, `unit_id`, `gst_slab_id`, `product_stock_status`, `product_hsn`, `product_sku`, `product_weight`, `product_dimension`, `product_mrp_inr`, `product_price_inr`, `product_mrp_usd`, `product_price_usd`, `product_descr`, `product_image`, `product_featured`, `product_video_url`, `product_status`, `product_addedby`, `product_created_at`, `product_updated_at`) VALUES
+(1, 1, 'zsdfgdfg', 1, 2, 3, 5, 1, 1, '44', '33', 8, '5*5*5', 500, 450, 100, 95, 'dfghfgh dfgh', 'product_image_1_1601536716.jpg', 0, 'http://localhost/kolgold/', 1, 1, '2020-10-01 12:44:19', '2020-10-01 07:18:36');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kol_product_category`
+--
+
+CREATE TABLE `kol_product_category` (
+  `product_category_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `is_main` int(11) NOT NULL,
+  `main_product_category_id` int(11) NOT NULL,
+  `product_category_name` varchar(350) NOT NULL,
+  `product_category_descr` text NOT NULL,
+  `product_category_image` varchar(250) NOT NULL,
+  `product_category_logo` varchar(250) NOT NULL,
+  `product_category_status` int(11) NOT NULL DEFAULT 1,
+  `product_category_addedby` int(11) DEFAULT 1,
+  `product_category_created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `product_category_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kol_product_category`
+--
+
+INSERT INTO `kol_product_category` (`product_category_id`, `company_id`, `is_main`, `main_product_category_id`, `product_category_name`, `product_category_descr`, `product_category_image`, `product_category_logo`, `product_category_status`, `product_category_addedby`, `product_category_created_at`, `product_category_updated_at`) VALUES
+(1, 1, 1, 0, 'Demo Main Category 1', 'zxdfgdfg sdfg', 'product_category_image_1_1601529199.jpg', 'product_category_logo_1_1601529199.jpg', 1, 1, '2020-10-01 10:43:19', '2020-10-01 05:13:19'),
+(2, 1, 0, 1, 'sgsdfg sdfg', 'sdfg sdfgsdfg sdfg', 'product_category_image_2_1601529672.jpg', 'product_category_logo_2_1601529672.png', 1, 1, '2020-10-01 10:51:12', '2020-10-01 05:21:12');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `kol_role`
 --
 
@@ -6238,6 +6444,32 @@ CREATE TABLE `kol_role` (
 INSERT INTO `kol_role` (`role_id`, `company_id`, `role_name`, `role_descr`, `role_status`, `role_addedby`, `role_created_at`) VALUES
 (1, 1, 'Admin', '', 1, 1, '0000-00-00 00:00:00'),
 (2, 1, 'User', 'User Description', 1, 1, '2020-09-03 07:46:35');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kol_slider`
+--
+
+CREATE TABLE `kol_slider` (
+  `slider_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `slider_possition` int(11) NOT NULL,
+  `slider_name` varchar(350) NOT NULL,
+  `slider_descr` text NOT NULL,
+  `slider_image` varchar(250) NOT NULL,
+  `slider_status` int(11) NOT NULL DEFAULT 1,
+  `slider_addedby` int(11) DEFAULT 1,
+  `slider_created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `slider_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kol_slider`
+--
+
+INSERT INTO `kol_slider` (`slider_id`, `company_id`, `slider_possition`, `slider_name`, `slider_descr`, `slider_image`, `slider_status`, `slider_addedby`, `slider_created_at`, `slider_updated_at`) VALUES
+(1, 1, 1, 'Demo 1', 'sdfg sdfg', 'slider_image_1_1601532045.jpg', 1, 1, '2020-10-01 11:30:45', '2020-10-01 06:00:45');
 
 -- --------------------------------------------------------
 
@@ -8535,16 +8767,64 @@ ALTER TABLE `district`
   ADD PRIMARY KEY (`district_id`);
 
 --
+-- Indexes for table `kol_blog`
+--
+ALTER TABLE `kol_blog`
+  ADD PRIMARY KEY (`blog_id`);
+
+--
+-- Indexes for table `kol_blog_category`
+--
+ALTER TABLE `kol_blog_category`
+  ADD PRIMARY KEY (`blog_category_id`);
+
+--
+-- Indexes for table `kol_brand`
+--
+ALTER TABLE `kol_brand`
+  ADD PRIMARY KEY (`brand_id`);
+
+--
+-- Indexes for table `kol_coupon`
+--
+ALTER TABLE `kol_coupon`
+  ADD PRIMARY KEY (`coupon_id`);
+
+--
 -- Indexes for table `kol_customer`
 --
 ALTER TABLE `kol_customer`
   ADD PRIMARY KEY (`customer_id`);
 
 --
+-- Indexes for table `kol_gst_slab`
+--
+ALTER TABLE `kol_gst_slab`
+  ADD PRIMARY KEY (`gst_slab_id`);
+
+--
+-- Indexes for table `kol_product`
+--
+ALTER TABLE `kol_product`
+  ADD PRIMARY KEY (`product_id`);
+
+--
+-- Indexes for table `kol_product_category`
+--
+ALTER TABLE `kol_product_category`
+  ADD PRIMARY KEY (`product_category_id`);
+
+--
 -- Indexes for table `kol_role`
 --
 ALTER TABLE `kol_role`
   ADD PRIMARY KEY (`role_id`);
+
+--
+-- Indexes for table `kol_slider`
+--
+ALTER TABLE `kol_slider`
+  ADD PRIMARY KEY (`slider_id`);
 
 --
 -- Indexes for table `kol_unit`
@@ -8600,16 +8880,64 @@ ALTER TABLE `district`
   MODIFY `district_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
+-- AUTO_INCREMENT for table `kol_blog`
+--
+ALTER TABLE `kol_blog`
+  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `kol_blog_category`
+--
+ALTER TABLE `kol_blog_category`
+  MODIFY `blog_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `kol_brand`
+--
+ALTER TABLE `kol_brand`
+  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `kol_coupon`
+--
+ALTER TABLE `kol_coupon`
+  MODIFY `coupon_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `kol_customer`
 --
 ALTER TABLE `kol_customer`
   MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `kol_gst_slab`
+--
+ALTER TABLE `kol_gst_slab`
+  MODIFY `gst_slab_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `kol_product`
+--
+ALTER TABLE `kol_product`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `kol_product_category`
+--
+ALTER TABLE `kol_product_category`
+  MODIFY `product_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `kol_role`
 --
 ALTER TABLE `kol_role`
   MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `kol_slider`
+--
+ALTER TABLE `kol_slider`
+  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `kol_unit`
