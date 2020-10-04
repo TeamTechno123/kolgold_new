@@ -142,7 +142,7 @@
                       <td class="text-center">
                         <div class="btn-coupon">
                           <a href="<?php echo base_url() ?>Master/edit_coupon/<?php echo $list->coupon_id; ?>" type="button" class="btn btn-sm btn-default"><i class="fa fa-edit text-primary"></i></a>
-                          <a href="<?php echo base_url() ?>Master/delete_coupon/<?php echo $list->coupon_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this Test Information');"><i class="fa fa-trash text-danger"></i></a>
+                          <a href="<?php echo base_url() ?>Master/delete_coupon/<?php echo $list->coupon_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this Coupon Information');"><i class="fa fa-trash text-danger"></i></a>
                         </div>
                       </td>
                       <td><?php echo $list->coupon_code; ?></td>

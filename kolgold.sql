@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2020 at 09:31 AM
+-- Generation Time: Oct 04, 2020 at 12:15 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -6189,7 +6189,7 @@ CREATE TABLE `kol_blog` (
   `blog_status` int(11) NOT NULL DEFAULT 1,
   `blog_addedby` int(11) DEFAULT 1,
   `blog_created_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `blog_updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `blog_updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -6197,7 +6197,9 @@ CREATE TABLE `kol_blog` (
 --
 
 INSERT INTO `kol_blog` (`blog_id`, `company_id`, `blog_mcategory_id`, `blog_scategory_id`, `blog_name`, `blog_descr`, `blog_image`, `blog_status`, `blog_addedby`, `blog_created_at`, `blog_updated_at`) VALUES
-(2, 1, 1, 2, 'sdfgsdfg', '<p>sdfg sdfgsdfg</p>', 'blog_image_2_1601537329.jpg', 1, 1, '2020-10-01 12:58:49', '2020-10-01 07:28:49');
+(2, 1, 1, 2, 'Anim pariatur cliche reprehenderit enim eiusmod', '<p><span style=\"color: rgb(33, 37, 41); font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"; text-align: center;\">enim eiusmod high life accusamus terry richardson ad squid. raw denim aesthetic synth nesciunt</span></p>', 'blog_image_2_1601539499.png', 1, 1, '2020-10-01 12:58:49', '2020-10-01 08:05:50'),
+(3, 1, 1, 2, 'Anim pariatur cliche reprehenderit enim eiusmod', '<p><span style=\"color: rgb(33, 37, 41); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; text-align: center;\">enim eiusmod high life accusamus terry richardson ad squid. raw denim aesthetic synth nesciunt</span></p>', 'blog_image_3_1601539584.png', 1, 1, '2020-10-01 13:36:24', '2020-10-01 08:06:24'),
+(4, 1, 1, 2, 'Anim pariatur cliche reprehenderit enim eiusmod', '<p class=\"text-justify mt-3\" style=\"color: rgb(119, 119, 119); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;\">Ac haca ullamcorper donec ante habi tasse donec imperdiet eturpis varius per a augue magna hac. Nec hac et vestibulum duis a tincidunt per a aptent interdum purus feugiat a id aliquet erat himenaeos nunc torquent euismod adipiscing adipiscing dui gravida justo. Ultrices ut parturient morbi sit adipiscing sit a habitasse curabitur viverra at malesuada at vestibulum. Leo duis lacinia placerat parturient montes vulputate cubilia posuere parturient inceptos massa euismod curabitur dis dignissim vestibulum quam a urna.</p><p class=\"text-justify\" style=\"color: rgb(119, 119, 119); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;\">Ac haca ullamcorper donec ante habi tasse donec imperdiet eturpis varius per a augue magna hac. Nec hac et vestibulum duis a tincidunt per a aptent interdum purus feugiat a id aliquet erat himenaeos nunc torquent euismod adipiscing adipiscing dui gravida justo. Ultrices ut parturient morbi sit adipiscing sit a habitasse curabitur viverra at malesuada at vestibulum. Leo duis lacinia placerat parturient montes vulputate cubilia posuere parturient inceptos massa euismod curabitur dis dignissim vestibulum quam a urna.</p>', 'blog_image_4_1601539601.png', 1, 1, '2020-10-01 13:36:41', '2020-10-01 08:06:41');
 
 -- --------------------------------------------------------
 
@@ -6390,7 +6392,10 @@ CREATE TABLE `kol_product` (
 --
 
 INSERT INTO `kol_product` (`product_id`, `company_id`, `product_name`, `product_mcategory_id`, `product_scategory_id`, `brand_id`, `unit_id`, `gst_slab_id`, `product_stock_status`, `product_hsn`, `product_sku`, `product_weight`, `product_dimension`, `product_mrp_inr`, `product_price_inr`, `product_mrp_usd`, `product_price_usd`, `product_descr`, `product_image`, `product_featured`, `product_video_url`, `product_status`, `product_addedby`, `product_created_at`, `product_updated_at`) VALUES
-(1, 1, 'zsdfgdfg', 1, 2, 3, 5, 1, 1, '44', '33', 8, '5*5*5', 500, 450, 100, 95, 'dfghfgh dfgh', 'product_image_1_1601536716.jpg', 0, 'http://localhost/kolgold/', 1, 1, '2020-10-01 12:44:19', '2020-10-01 07:18:36');
+(2, 1, 'Kolhapuri Chappal', 1, 2, 3, 5, 1, 1, '1', '2', 0.5, '20*50*5', 1000, 900, 200, 180, 'Kolhapuri Chappal', 'product_image_2_1601538137.png', 1, 'http://localhost/kolgold/', 1, 1, '2020-10-01 13:12:17', '2020-10-01 07:42:26'),
+(3, 1, 'Kolhapuri Jaggery', 1, 2, 3, 3, 1, 1, '2', '3', 10, '10*10*10', 700, 650, 150, 140, 'Kolhapuri Jaggery', 'product_image_3_1601538280.png', 0, 'http://localhost/kolgold/', 1, 1, '2020-10-01 13:14:40', '2020-10-01 07:44:40'),
+(4, 1, 'Kolhapur Handcrafted', 1, 2, 3, 5, 1, 1, '3', '4', 0.5, '10*10*10', 500, 440, 100, 95, 'Kolhapur Handcrafted', 'product_image_4_1601538350.png', 1, 'http://localhost/kolgold/', 1, 1, '2020-10-01 13:15:50', '2020-10-01 07:45:51'),
+(5, 1, 'Kolhapuri Spices', 1, 2, 3, 5, 1, 1, '4', '5', 0.2, '1*1*1', 200, 180, 20, 18, 'Kolhapuri Spices', 'product_image_5_1601538429.png', 1, 'http://localhost/kolgold/', 1, 1, '2020-10-01 13:17:09', '2020-10-01 07:47:09');
 
 -- --------------------------------------------------------
 
@@ -6418,8 +6423,12 @@ CREATE TABLE `kol_product_category` (
 --
 
 INSERT INTO `kol_product_category` (`product_category_id`, `company_id`, `is_main`, `main_product_category_id`, `product_category_name`, `product_category_descr`, `product_category_image`, `product_category_logo`, `product_category_status`, `product_category_addedby`, `product_category_created_at`, `product_category_updated_at`) VALUES
-(1, 1, 1, 0, 'Demo Main Category 1', 'zxdfgdfg sdfg', 'product_category_image_1_1601529199.jpg', 'product_category_logo_1_1601529199.jpg', 1, 1, '2020-10-01 10:43:19', '2020-10-01 05:13:19'),
-(2, 1, 0, 1, 'sgsdfg sdfg', 'sdfg sdfgsdfg sdfg', 'product_category_image_2_1601529672.jpg', 'product_category_logo_2_1601529672.png', 1, 1, '2020-10-01 10:51:12', '2020-10-01 05:21:12');
+(1, 1, 1, 0, 'Kolhapuri Products', 'zxdfgdfg sdfg', 'product_category_image_1_1601539358.png', 'product_category_logo_1_1601539369.png', 1, 1, '2020-10-01 10:43:19', '2020-10-01 08:02:49'),
+(2, 1, 0, 1, 'sgsdfg sdfg', 'sdfg sdfgsdfg sdfg', 'product_category_image_2_1601529672.jpg', 'product_category_logo_2_1601529672.png', 1, 1, '2020-10-01 10:51:12', '2020-10-01 05:21:12'),
+(3, 1, 1, 0, 'Kolhapuri Chappal', 'zsgsdfg', 'product_category_image_3_1601549675.png', 'product_category_logo_3_1601549675.png', 1, 1, '2020-10-01 15:57:46', '2020-10-01 10:54:35'),
+(4, 1, 1, 0, 'Kolhapuri Gul (Jaggery)', 'Kolhapuri Gul (Jaggery)', 'product_category_image_4_1601549725.png', 'product_category_logo_4_1601549725.png', 1, 1, '2020-10-01 16:25:24', '2020-10-01 10:55:25'),
+(5, 1, 1, 0, 'Kolhapuri Masala', 'Kolhapuri Masala', 'product_category_image_5_1601549772.png', 'product_category_logo_5_1601549772.png', 1, 1, '2020-10-01 16:26:12', '2020-10-01 10:56:12'),
+(6, 1, 1, 0, 'Kolhapuri Handcrafted', 'Kolhapuri Handcrafted', 'product_category_image_6_1601549813.png', 'product_category_logo_6_1601549813.png', 1, 1, '2020-10-01 16:26:53', '2020-10-01 10:56:53');
 
 -- --------------------------------------------------------
 
@@ -6469,7 +6478,35 @@ CREATE TABLE `kol_slider` (
 --
 
 INSERT INTO `kol_slider` (`slider_id`, `company_id`, `slider_possition`, `slider_name`, `slider_descr`, `slider_image`, `slider_status`, `slider_addedby`, `slider_created_at`, `slider_updated_at`) VALUES
-(1, 1, 1, 'Demo 1', 'sdfg sdfg', 'slider_image_1_1601532045.jpg', 1, 1, '2020-10-01 11:30:45', '2020-10-01 06:00:45');
+(2, 1, 1, 'Kolhapuri Gul', 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.', 'slider_image_2_1601552449.png', 1, 1, '2020-10-01 17:10:49', '2020-10-01 11:40:49'),
+(3, 1, 1, 'Kolhapuri Chappal', 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.', 'slider_image_3_1601552719.png', 1, 1, '2020-10-01 17:12:40', '2020-10-01 11:45:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kol_tourism`
+--
+
+CREATE TABLE `kol_tourism` (
+  `tourism_id` int(11) NOT NULL,
+  `company_id` int(11) NOT NULL,
+  `tourism_name` varchar(350) NOT NULL,
+  `tourism_short_descr` text NOT NULL,
+  `tourism_descr` text NOT NULL,
+  `tourism_image` varchar(250) NOT NULL,
+  `tourism_status` int(11) NOT NULL DEFAULT 1,
+  `tourism_addedby` int(11) DEFAULT 1,
+  `tourism_created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `tourism_updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kol_tourism`
+--
+
+INSERT INTO `kol_tourism` (`tourism_id`, `company_id`, `tourism_name`, `tourism_short_descr`, `tourism_descr`, `tourism_image`, `tourism_status`, `tourism_addedby`, `tourism_created_at`, `tourism_updated_at`) VALUES
+(1, 1, 'Panhala fort', 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.', '<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>', 'tourism_image_1_1601553392.png', 1, 1, '2020-10-01 17:26:32', '2020-10-01 11:56:32'),
+(2, 1, 'Panhala', 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.', '<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>', 'tourism_image_2_1601553448.png', 1, 1, '2020-10-01 17:27:28', '2020-10-01 11:57:28');
 
 -- --------------------------------------------------------
 
@@ -8827,6 +8864,12 @@ ALTER TABLE `kol_slider`
   ADD PRIMARY KEY (`slider_id`);
 
 --
+-- Indexes for table `kol_tourism`
+--
+ALTER TABLE `kol_tourism`
+  ADD PRIMARY KEY (`tourism_id`);
+
+--
 -- Indexes for table `kol_unit`
 --
 ALTER TABLE `kol_unit`
@@ -8883,7 +8926,7 @@ ALTER TABLE `district`
 -- AUTO_INCREMENT for table `kol_blog`
 --
 ALTER TABLE `kol_blog`
-  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kol_blog_category`
@@ -8919,13 +8962,13 @@ ALTER TABLE `kol_gst_slab`
 -- AUTO_INCREMENT for table `kol_product`
 --
 ALTER TABLE `kol_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `kol_product_category`
 --
 ALTER TABLE `kol_product_category`
-  MODIFY `product_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `product_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `kol_role`
@@ -8937,7 +8980,13 @@ ALTER TABLE `kol_role`
 -- AUTO_INCREMENT for table `kol_slider`
 --
 ALTER TABLE `kol_slider`
-  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `kol_tourism`
+--
+ALTER TABLE `kol_tourism`
+  MODIFY `tourism_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `kol_unit`

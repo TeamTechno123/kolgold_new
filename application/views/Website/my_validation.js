@@ -86,7 +86,7 @@ $('.password, .con_password').on('change',function(){
 $('.valid_image').bind('change', function() {
   var size = this.files[0].size;
   var type = this.files[0].type;
-  if(size > 861276){
+  if(size > 561276){
     toastr.error('File size is must be less than 500kb');
     $(this).val('');
   }

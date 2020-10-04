@@ -141,9 +141,16 @@
             </li>
 
             <li class="nav-item">
-              <a <?php if(isset($update_tax_rate)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/blog" <?php } ?> class="nav-link">
+              <a <?php if(isset($update_blog)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/blog" <?php } ?> class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Blog information</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a <?php if(isset($update_tourism)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/tourism" <?php } ?> class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Tourism information</p>
               </a>
             </li>
 

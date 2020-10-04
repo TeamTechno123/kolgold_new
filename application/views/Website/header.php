@@ -16,9 +16,9 @@
   </head>
   <body>
 
-  <section class="sub-nav">   
+  <section class="sub-nav">
     <div class="row" id="scrollmenu">
-      <div class="col-md-5 col-12">    
+      <div class="col-md-5 col-12">
         <div class="nav-main">
          <nav class="navbar navbar-expand-lg navbar-light ">
           <a class="navbar-brand d-block d-sm-none" href="<?php echo base_url(); ?>"> <img src="<?php echo base_url(); ?>assets/images/website/logo.png"> </a>
@@ -37,11 +37,11 @@
                 <a class="nav-link" href="<?php echo base_url(); ?>Shop">Shop</a>
               </li>
                <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url(); ?>Blog">Blog</a>
+                <a class="nav-link" href="<?php echo base_url(); ?>Blog-List">Blog</a>
               </li>
                <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url(); ?>Contact-Us">Contact Us</a>
-              </li>              
+              </li>
             </ul>
           </div>
         </nav>
@@ -53,8 +53,10 @@
        </div>
 
        <div class="col-md-5 d-none d-sm-block">
-          <p class="login mt-3 text-center"> <span class="f-14 text-grey" data-toggle="modal" data-target="#exampleModal" >  Login / Register</span> <span class="ml-2 f-20"><i class="far fa-heart"></i></span> <span class="ml-2 f-20"> <i class="fas fa-search f-16"></i>  </span> <span class="ml-2 f-20"> <i class="fas fa-cart-plus"></i></span><span class="f-14 ml-2"> <i class="fas fa-rupee-sign"></i> 0.00 </span> </p> 
-       </div>      
+          <p class="login mt-3 text-center">
+            <a href="#" class="f-14 text-grey" data-toggle="modal" data-target="#exampleModal" >  Login / Register</a>
+            <span class="ml-2 f-20"><i class="far fa-heart"></i></span> <span class="ml-2 f-20"> <i class="fas fa-search f-16"></i>  </span> <span class="ml-2 f-20"> <i class="fas fa-cart-plus"></i></span><span class="f-14 ml-2"> <i class="fas fa-rupee-sign"></i> 0.00 </span> </p>
+       </div>
     </div>
-       
+
     </section>

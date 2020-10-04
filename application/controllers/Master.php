@@ -383,6 +383,131 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     header('location:'.base_url().'Master/blog');
   }
 
+
+/*********************************** Tourism *********************************/
+
+  // Add Tourism....
+  public function tourism(){
+    $kol_user_id = $this->session->userdata('kol_user_id');
+    $kol_company_id = $this->session->userdata('kol_company_id');
+    $kol_role_id = $this->session->userdata('kol_role_id');
+    if($kol_user_id == '' && $kol_company_id == ''){ header('location:'.base_url().'User'); }
+
+    $this->form_validation->set_rules('tourism_name', 'Tourism Name', 'trim|required');
+    if ($this->form_validation->run() != FALSE) {
+      $tourism_status = $this->input->post('tourism_status');
+      if(!isset($tourism_status)){ $tourism_status = '1'; }
+      $save_data = $_POST;
+      $save_data['tourism_status'] = $tourism_status;
+      $save_data['company_id'] = $kol_company_id;
+      $save_data['tourism_addedby'] = $kol_user_id;
+      $tourism_id = $this->Master_Model->save_data('kol_tourism', $save_data);
+
+      if($_FILES['tourism_image']['name']){
+        $time = time();
+        $image_name = 'tourism_image_'.$tourism_id.'_'.$time;
+        $config['upload_path'] = 'assets/images/tourism/';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $config['file_name'] = $image_name;
+        $filename = $_FILES['tourism_image']['name'];
+        $ext = pathinfo($filename, PATHINFO_EXTENSION);
+        $this->upload->initialize($config); // if upload library autoloaded
+        if ($this->upload->do_upload('tourism_image') && $tourism_id && $image_name && $ext && $filename){
+          $tourism_image_up['tourism_image'] =  $image_name.'.'.$ext;
+          $this->Master_Model->update_info('tourism_id', $tourism_id, 'kol_tourism', $tourism_image_up);
+          $this->session->set_flashdata('upload_success','File Uploaded Successfully');
+        }
+        else{
+          $error = $this->upload->display_errors();
+          $this->session->set_flashdata('upload_error',$error);
+        }
+      }
+      $this->session->set_flashdata('save_success','success');
+      header('location:'.base_url().'Master/tourism');
+    }
+
+    $data['tourism_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','tourism_id','DESC','kol_tourism');
+    $data['page'] = 'Tourism';
+    $this->load->view('Admin/Include/head', $data);
+    $this->load->view('Admin/Include/navbar', $data);
+    $this->load->view('Admin/Master/tourism', $data);
+    $this->load->view('Admin/Include/footer', $data);
+  }
+
+  // Edit/Update Tourism...
+  public function edit_tourism($tourism_id){
+    $kol_user_id = $this->session->userdata('kol_user_id');
+    $kol_company_id = $this->session->userdata('kol_company_id');
+    $kol_role_id = $this->session->userdata('kol_role_id');
+    if($kol_user_id == '' && $kol_company_id == ''){ header('location:'.base_url().'User'); }
+
+    $this->form_validation->set_rules('tourism_name', 'Tourism Name', 'trim|required');
+    if ($this->form_validation->run() != FALSE) {
+      $tourism_status = $this->input->post('tourism_status');
+      if(!isset($tourism_status)){ $tourism_status = '1'; }
+      $update_data = $_POST;
+      unset($update_data['old_tourism_image']);
+      $update_data['tourism_status'] = $tourism_status;
+      $update_data['tourism_addedby'] = $kol_user_id;
+      $this->Master_Model->update_info('tourism_id', $tourism_id, 'kol_tourism', $update_data);
+
+      if($_FILES['tourism_image']['name']){
+        $time = time();
+        $image_name = 'tourism_image_'.$tourism_id.'_'.$time;
+        $config['upload_path'] = 'assets/images/tourism/';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $config['file_name'] = $image_name;
+        $filename = $_FILES['tourism_image']['name'];
+        $ext = pathinfo($filename, PATHINFO_EXTENSION);
+        $this->upload->initialize($config); // if upload library autoloaded
+        if ($this->upload->do_upload('tourism_image') && $tourism_id && $image_name && $ext && $filename){
+          $tourism_image_up['tourism_image'] =  $image_name.'.'.$ext;
+          $this->Master_Model->update_info('tourism_id', $tourism_id, 'kol_tourism', $tourism_image_up);
+          if($_POST['old_tourism_image']){ unlink("assets/images/tourism/".$_POST['old_tourism_image']); }
+          $this->session->set_flashdata('upload_success','File Uploaded Successfully');
+        }
+        else{
+          $error = $this->upload->display_errors();
+          $this->session->set_flashdata('upload_error',$error);
+        }
+      }
+
+      $this->session->set_flashdata('update_success','success');
+      header('location:'.base_url().'Master/tourism');
+    }
+
+    $tourism_info = $this->Master_Model->get_info_arr('tourism_id',$tourism_id,'kol_tourism');
+    if(!$tourism_info){ header('location:'.base_url().'Master/tourism'); }
+    $data['update'] = 'update';
+    $data['update_tourism'] = 'update';
+    $data['tourism_info'] = $tourism_info[0];
+    $data['act_link'] = base_url().'Master/edit_tourism/'.$tourism_id;
+    
+    $data['tourism_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','tourism_id','DESC','kol_tourism');
+    $data['page'] = 'Edit Tourism';
+    $this->load->view('Admin/Include/head', $data);
+    $this->load->view('Admin/Include/navbar', $data);
+    $this->load->view('Admin/Master/tourism', $data);
+    $this->load->view('Admin/Include/footer', $data);
+  }
+
+  //Delete Tourism...
+  public function delete_tourism($tourism_id){
+    $kol_user_id = $this->session->userdata('kol_user_id');
+    $kol_company_id = $this->session->userdata('kol_company_id');
+    $kol_role_id = $this->session->userdata('kol_role_id');
+    if($kol_user_id == '' && $kol_company_id == ''){ header('location:'.base_url().'User'); }
+    $tourism_info = $this->Master_Model->get_info_arr_fields('tourism_image, tourism_id', 'tourism_id', $tourism_id, 'kol_tourism');
+    if($tourism_info){
+      $tourism_image = $tourism_info[0]['tourism_image'];
+      if($tourism_image){ unlink("assets/images/tourism/".$tourism_image); }
+    }
+    $this->Master_Model->delete_info('tourism_id', $tourism_id, 'kol_tourism');
+    $this->session->set_flashdata('delete_success','success');
+    header('location:'.base_url().'Master/tourism');
+  }
+
+
 /*********************************** Product Category *********************************/
 
   // Add Product Category....

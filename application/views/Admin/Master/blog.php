@@ -41,7 +41,7 @@
                           <option value="">Select Blog Main Category</option>
                           <?php if($main_blog_category_list){
                             foreach ($main_blog_category_list as $list) { ?>
-                              <option value="<?php echo $list->blog_category_id ?>" <?php if(isset($product_info) && $product_info['product_mcategory_id'] == $list->blog_category_id){ echo 'selected'; } if($list->blog_category_status == 0){ echo 'disabled'; }  ?>><?php echo $list->blog_category_name ?></option>
+                              <option value="<?php echo $list->blog_category_id ?>" <?php if(isset($blog_info) && $blog_info['blog_mcategory_id'] == $list->blog_category_id){ echo 'selected'; } if($list->blog_category_status == 0){ echo 'disabled'; }  ?>><?php echo $list->blog_category_name ?></option>
                           <?php } } ?>
                         </select>
                       </div>
@@ -133,7 +133,7 @@
                       <td class="text-center">
                         <div class="btn-blog">
                           <a href="<?php echo base_url() ?>Master/edit_blog/<?php echo $list->blog_id; ?>" type="button" class="btn btn-sm btn-default"><i class="fa fa-edit text-primary"></i></a>
-                          <a href="<?php echo base_url() ?>Master/delete_blog/<?php echo $list->blog_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this Brand Information');"><i class="fa fa-trash text-danger"></i></a>
+                          <a href="<?php echo base_url() ?>Master/delete_blog/<?php echo $list->blog_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this Blog Information');"><i class="fa fa-trash text-danger"></i></a>
                         </div>
                       </td>
                       <td><?php echo $list->blog_name; ?></td>

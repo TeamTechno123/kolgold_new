@@ -220,9 +220,9 @@
                     <tr>
                       <td class="d-none"><?php echo $i; ?></td>
                       <td class="text-center">
-                        <div class="btn-product">
+                        <div class="btn-group">
                           <a href="<?php echo base_url() ?>Master/edit_product/<?php echo $list->product_id; ?>" type="button" class="btn btn-sm btn-default"><i class="fa fa-edit text-primary"></i></a>
-                          <a href="<?php echo base_url() ?>Master/delete_product/<?php echo $list->product_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this Test Information');"><i class="fa fa-trash text-danger"></i></a>
+                          <a href="<?php echo base_url() ?>Master/delete_product/<?php echo $list->product_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this Product Information');"><i class="fa fa-trash text-danger"></i></a>
                         </div>
                       </td>
                       <td><?php echo $list->product_name; ?></td>

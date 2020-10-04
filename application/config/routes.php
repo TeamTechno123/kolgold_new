@@ -61,11 +61,15 @@ $route['Contact-Us'] = 'Website/contact';
 $route['Payment-Methode'] = 'Website/payment';
 $route['Disclaimer'] = 'Website/disclaimer';
 $route['Blog'] = 'Website/blog';
+$route['Blog-List'] = 'Website/blog_list';
+$route['Blog-Details/(:any)'] = 'Website/blog_details/$1';
 $route['Terms-condition'] = 'Website/terms';
 $route['Privacy-Policy'] = 'Website/privacy';
 $route['Shipping-Policy'] = 'Website/shipping';
 $route['Return-Policy'] = 'Website/return';
 $route['FAQ'] = 'Website/faq';
+
+$route['Product-Details/(:any)'] = 'Website/product_details/$1';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

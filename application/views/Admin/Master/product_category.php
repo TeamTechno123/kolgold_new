@@ -136,7 +136,7 @@
                       <td class="text-center">
                         <div class="btn-product_category">
                           <a href="<?php echo base_url() ?>Master/edit_product_category/<?php echo $list->product_category_id; ?>" type="button" class="btn btn-sm btn-default"><i class="fa fa-edit text-primary"></i></a>
-                          <a href="<?php echo base_url() ?>Master/delete_product_category/<?php echo $list->product_category_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this product_category Information');"><i class="fa fa-trash text-danger"></i></a>
+                          <a href="<?php echo base_url() ?>Master/delete_product_category/<?php echo $list->product_category_id; ?>" type="button" class="btn btn-sm btn-default" onclick="return confirm('Delete this Product Category Information');"><i class="fa fa-trash text-danger"></i></a>
                         </div>
                       </td>
                       <td><?php echo $list->product_category_name; ?></td>
