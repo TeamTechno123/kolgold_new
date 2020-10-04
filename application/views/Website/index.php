@@ -19,7 +19,7 @@
         <div class="row">
           <div class="col-md-12">
               <p class="marquee"> <span>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. </span>  </p>
-          </div>        
+          </div>      
         </div>
         
       </div>
