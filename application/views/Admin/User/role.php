@@ -40,49 +40,8 @@
                       <label>Role Description</label>
                       <textarea class="form-control form-control-sm" name="role_descr" id="role_descr" rows="4"><?php if(isset($role_info)){ echo $role_info['role_descr']; } ?></textarea>
                     </div>
-                    <div class="form-group col-md-12">
-                      <hr>
-                      <label>Role Permissions</label>
-                    </div>
-                    <div class="form-group col-md-12">
-                      <div class="row">
-                        <div class="col-md-2">
-                          <label> 1. User Info </label>
-                        </div>
-                        <div class="col-md-2">
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="user_read" id="user_read" value="0" <?php if(isset($role_info) && $role_info['user_read'] == 0){ echo 'checked'; } ?>>
-                            <label for="user_read" class="custom-control-label">Read</label>
-                          </div>
-                        </div>
-                        <div class="col-md-2">
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="user_create" id="user_create" value="0" <?php if(isset($role_info) && $role_info['user_create'] == 0){ echo 'checked'; } ?>>
-                            <label for="user_create" class="custom-control-label">Create</label>
-                          </div>
-                        </div>
-                        <div class="col-md-2">
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="role_status" id="role_status" value="0" <?php if(isset($role_info) && $role_info['role_status'] == 0){ echo 'checked'; } ?>>
-                            <label for="role_status" class="custom-control-label">Update</label>
-                          </div>
-                        </div>
-                        <div class="col-md-2">
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="role_status" id="role_status" value="0" <?php if(isset($role_info) && $role_info['role_status'] == 0){ echo 'checked'; } ?>>
-                            <label for="role_status" class="custom-control-label">Delete</label>
-                          </div>
-                        </div>
-                        <div class="col-md-2">
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="role_status" id="role_status" value="0" <?php if(isset($role_info) && $role_info['role_status'] == 0){ echo 'checked'; } ?>>
-                            <label for="role_status" class="custom-control-label">Print</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
 
-
+                    
                   </div>
                   <div class="card-footer clearfix" style="display: block;">
                     <div class="row">

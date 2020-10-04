@@ -97,12 +97,12 @@
                 <p>Company Information</p>
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a <?php if(isset($update_branch)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>User/branch" <?php } ?> class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Branch</p>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a <?php if(isset($update_user)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>User/user_information" <?php } ?> class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
@@ -133,47 +133,60 @@
                 <p>Brand information</p>
               </a>
             </li>
+            <li class="nav-item">
+              <a <?php if(isset($update_blog_category)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/blog_category" <?php } ?> class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Blog Category</p>
+              </a>
+            </li>
 
             <li class="nav-item">
-              <a <?php if(isset($update_tax_rate)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/blog" <?php } ?> class="nav-link">
+              <a <?php if(isset($update_blog)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/blog" <?php } ?> class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Blog information</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a <?php if(isset($update_shipping_method)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/category" <?php } ?> class="nav-link">
+              <a <?php if(isset($update_tourism)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/tourism" <?php } ?> class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Category Information</p>
+                <p>Tourism information</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a <?php if(isset($update_product_category)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/product_category" <?php } ?> class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Product Category</p>
               </a>
             </li>
             <li class="nav-item">
-              <a <?php if(isset($update_unit)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/coupon" <?php } ?> class="nav-link">
+              <a <?php if(isset($update_coupon)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/coupon" <?php } ?> class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Coupon Information</p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a <?php if(isset($update_unit)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/product" <?php } ?> class="nav-link">
+              <a <?php if(isset($update_product)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/product" <?php } ?> class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Product Information</p>
               </a>
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a <?php if(isset($update_order_status)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/role" <?php } ?> class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Role Information</p>
               </a>
-            </li>
+            </li> -->
 
              <li class="nav-item">
-              <a <?php if(isset($update_order_status)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/unit" <?php } ?> class="nav-link">
+              <a <?php if(isset($update_unit)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/unit" <?php } ?> class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Unit Information</p>
               </a>
-            </li>     
+            </li>
 
              <li class="nav-item">
               <a <?php if(isset($update_order_status)){ echo 'href="'.$act_link.'"'; } else{ ?> href="<?php echo base_url(); ?>Master/slider" <?php } ?> class="nav-link">

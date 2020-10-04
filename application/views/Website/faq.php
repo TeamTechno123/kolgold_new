@@ -45,13 +45,13 @@
               <p>A. Essentially tap on the connection(link) saying return/supplant(replace). Enter your request(order) number and enlisted email id. You will see the achievement(success) message. This shows discount(refund) has been started(initiated). We will answer inside 1 working day to your demand with an email and return pressing slip. Simply utilize that pressing slip to send the item back to us through Fedex. Recall that you have to drop off the bundle at the closest fedex area specified in the email.</p>
 
               <h6>Q. I DO NOT HAVE FEDEX LOCATION NEARBY? WHAT SHOULD I DO?</h6>
-              <p>A. No stresses. We will organize a pickup for you. Be that as it may, we can't ensure the switch pickup promptly. On the off chance that the pickup is not done resulting day compassionately orchestrate to send the item back to us by means of some other courier service (Professional, DTDC, India Post and so on..). We will re­imburse upto INR 100/­ per Kg into your record. It would be ideal if you send the dispatch receipt to support@kalapuri.com</p>
+              <p>A. No stresses. We will organize a pickup for you. Be that as it may, we can't ensure the switch pickup promptly. On the off chance that the pickup is not done resulting day compassionately orchestrate to send the item back to us by means of some other courier service (Professional, DTDC, India Post and so on..). We will re­imburse upto INR 100/­ per Kg into your record. It would be ideal if you send the dispatch receipt to support@kolgold.com</p>
 
               <h6>Q. HOW DO I CANCEL MY ORDER?</h6>
               <p>A. Just tap on the connection(link) above. Enter your subtle elements(detail). In the event that your item has not been delivered from our distribution center it can be scratched off promptly. On the off chance that it has been dispatched please contact our client bolster(customer support) for cancellation.</p>
 
               <h6>Q. WHAT DO I DO IF I RECEIVE WRONG/DAMAGED PRODUCT?</h6>
-              <p>A. Just start an arrival ask for and send the photo of harmed item or wrong item to support@kalapuri.com. Once our group confirms that item is harmed we will give the full discount back to you. No inquiries required. You will requested the NEFT bank details of interest to which the cash will be discounted. For NEFT we require taking after points of interest</p>
+              <p>A. Just start an arrival ask for and send the photo of harmed item or wrong item to support@kolgold.com. Once our group confirms that item is harmed we will give the full discount back to you. No inquiries required. You will requested the NEFT bank details of interest to which the cash will be discounted. For NEFT we require taking after points of interest</p>
 
               <p>Account Name</p>
               <p>IFSC Code</p>

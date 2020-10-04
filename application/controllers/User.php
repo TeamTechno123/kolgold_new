@@ -325,7 +325,7 @@ class User extends CI_Controller{
       $save_data['user_status'] = $user_status;
       $save_data['company_id'] = $kol_company_id;
       $save_data['user_addedby'] = $kol_user_id;
-      $user_id = $this->Master_Model->save_data('rest_user', $save_data);
+      $user_id = $this->Master_Model->save_data('kol_user', $save_data);
 
       if($_FILES['user_image']['name']){
         $time = time();
@@ -338,7 +338,7 @@ class User extends CI_Controller{
         $this->upload->initialize($config); // if upload library autoloaded
         if ($this->upload->do_upload('user_image') && $user_id && $image_name && $ext && $filename){
           $user_image_up['user_image'] =  $image_name.'.'.$ext;
-          $this->Master_Model->update_info('user_id', $user_id, 'rest_user', $user_image_up);
+          $this->Master_Model->update_info('user_id', $user_id, 'kol_user', $user_image_up);
           $this->session->set_flashdata('upload_success','File Uploaded Successfully');
         }
         else{
@@ -350,13 +350,13 @@ class User extends CI_Controller{
       $this->session->set_flashdata('save_success','success');
       header('location:'.base_url().'User/user_information');
     }
-    $data['role_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','role_id','ASC','rest_role');
+    $data['role_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','role_id','ASC','kol_role');
     $data['country_list'] = $this->Master_Model->get_list('','country_name','ASC','country');
     $data['state_list'] = $this->Master_Model->get_list('','state_name','ASC','state');
     $data['district_list'] = $this->Master_Model->get_list('','district_name','ASC','district');
     $data['city_list'] = $this->Master_Model->get_list('','city_name','ASC','city');
 
-    $data['user_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'is_admin','0','','','','','user_id','ASC','rest_user');
+    $data['user_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'is_admin','0','','','','','user_id','ASC','kol_user');
     $data['page'] = 'User';
     $this->load->view('Admin/Include/head', $data);
     $this->load->view('Admin/Include/navbar', $data);
@@ -379,7 +379,7 @@ class User extends CI_Controller{
       unset($update_data['old_user_image']);
       $update_data['user_status'] = $user_status;
       $update_data['user_addedby'] = $kol_user_id;
-      $this->Master_Model->update_info('user_id', $user_id, 'rest_user', $update_data);
+      $this->Master_Model->update_info('user_id', $user_id, 'kol_user', $update_data);
 
       if($_FILES['user_image']['name']){
         $time = time();
@@ -392,7 +392,7 @@ class User extends CI_Controller{
         $this->upload->initialize($config); // if upload library autoloaded
         if ($this->upload->do_upload('user_image') && $user_id && $image_name && $ext && $filename){
           $user_image_up['user_image'] =  $image_name.'.'.$ext;
-          $this->Master_Model->update_info('user_id', $user_id, 'rest_user', $user_image_up);
+          $this->Master_Model->update_info('user_id', $user_id, 'kol_user', $user_image_up);
           if($_POST['old_user_img']){ unlink("assets/images/master/".$_POST['old_user_img']); }
           $this->session->set_flashdata('upload_success','File Uploaded Successfully');
         }
@@ -406,20 +406,20 @@ class User extends CI_Controller{
       header('location:'.base_url().'User/user_information');
     }
 
-    $user_info = $this->Master_Model->get_info_arr('user_id',$user_id,'rest_user');
+    $user_info = $this->Master_Model->get_info_arr('user_id',$user_id,'kol_user');
     if(!$user_info){ header('location:'.base_url().'User/user_information'); }
     $data['update'] = 'update';
     $data['update_user'] = 'update';
     $data['user_info'] = $user_info[0];
     $data['act_link'] = base_url().'User/edit_user/'.$user_id;
 
-    $data['role_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','role_id','ASC','rest_role');
+    $data['role_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','role_id','ASC','kol_role');
     $data['country_list'] = $this->Master_Model->get_list_by_id3('','','','','','','','country_name','ASC','country');
     $data['state_list'] = $this->Master_Model->get_list_by_id3('','','','','','','','state_name','ASC','state');
     $data['district_list'] = $this->Master_Model->get_list_by_id3('','','','','','','','district_name','ASC','district');
     $data['city_list'] = $this->Master_Model->get_list_by_id3('','','','','','','','city_name','ASC','city');
 
-    $data['user_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'is_admin','0','','','','','user_id','ASC','rest_user');
+    $data['user_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'is_admin','0','','','','','user_id','ASC','kol_user');
     $data['page'] = 'Edit User';
     $this->load->view('Admin/Include/head', $data);
     $this->load->view('Admin/Include/navbar', $data);
@@ -433,12 +433,12 @@ class User extends CI_Controller{
     $kol_company_id = $this->session->userdata('kol_company_id');
     $kol_role_id = $this->session->userdata('kol_role_id');
     if($kol_user_id == '' || $kol_company_id == ''){ header('location:'.base_url().'User'); }
-    $user_info = $this->Master_Model->get_info_arr_fields('user_image, user_id', 'user_id', $user_id, 'rest_user');
+    $user_info = $this->Master_Model->get_info_arr_fields('user_image, user_id', 'user_id', $user_id, 'kol_user');
     if($user_info){
       $user_image = $user_info[0]['user_image'];
       if($user_image){ unlink("assets/images/master/".$user_image); }
     }
-    $this->Master_Model->delete_info('user_id', $user_id, 'rest_user');
+    $this->Master_Model->delete_info('user_id', $user_id, 'kol_user');
     $this->session->set_flashdata('delete_success','success');
     header('location:'.base_url().'User/user_information');
   }
@@ -459,7 +459,7 @@ class User extends CI_Controller{
       unset($update_data['old_user_image']);
       // $update_data['user_status'] = $user_status;
       $update_data['user_addedby'] = $kol_user_id;
-      $this->Master_Model->update_info('user_id', $user_id, 'rest_user', $update_data);
+      $this->Master_Model->update_info('user_id', $user_id, 'kol_user', $update_data);
 
       if($_FILES['user_image']['name']){
         $time = time();
@@ -472,7 +472,7 @@ class User extends CI_Controller{
         $this->upload->initialize($config); // if upload library autoloaded
         if ($this->upload->do_upload('user_image') && $user_id && $image_name && $ext && $filename){
           $user_image_up['user_image'] =  $image_name.'.'.$ext;
-          $this->Master_Model->update_info('user_id', $user_id, 'rest_user', $user_image_up);
+          $this->Master_Model->update_info('user_id', $user_id, 'kol_user', $user_image_up);
           if($_POST['old_user_img']){ unlink("assets/images/master/".$_POST['old_user_img']); }
           $this->session->set_flashdata('upload_success','File Uploaded Successfully');
         }
@@ -486,20 +486,20 @@ class User extends CI_Controller{
       header('location:'.base_url().'User/dashboard');
     }
 
-    $user_info = $this->Master_Model->get_info_arr('user_id',$user_id,'rest_user');
+    $user_info = $this->Master_Model->get_info_arr('user_id',$user_id,'kol_user');
     if(!$user_info){ header('location:'.base_url().'User/user_information'); }
     $data['update'] = 'update';
     $data['update_user'] = 'update';
     $data['user_info'] = $user_info[0];
     $data['act_link'] = base_url().'User/user_profile';
 
-    $data['role_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','role_id','ASC','rest_role');
+    $data['role_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','role_id','ASC','kol_role');
     $data['country_list'] = $this->Master_Model->get_list_by_id3('','','','','','','','country_name','ASC','country');
     $data['state_list'] = $this->Master_Model->get_list_by_id3('','','','','','','','state_name','ASC','state');
     $data['district_list'] = $this->Master_Model->get_list_by_id3('','','','','','','','district_name','ASC','district');
     $data['city_list'] = $this->Master_Model->get_list_by_id3('','','','','','','','city_name','ASC','city');
 
-    // $data['user_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'is_admin','0','','','','','user_id','ASC','rest_user');
+    // $data['user_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'is_admin','0','','','','','user_id','ASC','kol_user');
     $data['page'] = 'Edit Profile';
     $this->load->view('Admin/Include/head', $data);
     $this->load->view('Admin/Include/navbar', $data);
@@ -525,13 +525,13 @@ class User extends CI_Controller{
       $save_data['role_status'] = $role_status;
       $save_data['company_id'] = $kol_company_id;
       $save_data['role_addedby'] = $kol_user_id;
-      $user_id = $this->Master_Model->save_data('rest_role', $save_data);
+      $user_id = $this->Master_Model->save_data('kol_role', $save_data);
 
       $this->session->set_flashdata('save_success','success');
       header('location:'.base_url().'User/role');
     }
 
-    $data['role_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','role_id','ASC','rest_role');
+    $data['role_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','role_id','ASC','kol_role');
     $data['page'] = 'Role';
     $this->load->view('Admin/Include/head', $data);
     $this->load->view('Admin/Include/navbar', $data);
@@ -553,20 +553,20 @@ class User extends CI_Controller{
       $update_data = $_POST;
       $update_data['role_status'] = $role_status;
       $update_data['role_addedby'] = $kol_user_id;
-      $this->Master_Model->update_info('role_id', $role_id, 'rest_role', $update_data);
+      $this->Master_Model->update_info('role_id', $role_id, 'kol_role', $update_data);
 
       $this->session->set_flashdata('update_success','success');
       header('location:'.base_url().'User/role');
     }
 
-    $role_info = $this->Master_Model->get_info_arr('role_id',$role_id,'rest_role');
+    $role_info = $this->Master_Model->get_info_arr('role_id',$role_id,'kol_role');
     if(!$role_info){ header('location:'.base_url().'User/role'); }
     $data['update'] = 'update';
     $data['update_role'] = 'update';
     $data['role_info'] = $role_info[0];
     $data['act_link'] = base_url().'User/edit_role/'.$role_id;
 
-    $data['role_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','role_id','ASC','rest_role');
+    $data['role_list'] = $this->Master_Model->get_list_by_id3($kol_company_id,'','','','','','','role_id','ASC','kol_role');
     $data['page'] = 'Edit Role';
     $this->load->view('Admin/Include/head', $data);
     $this->load->view('Admin/Include/navbar', $data);
@@ -580,7 +580,7 @@ class User extends CI_Controller{
     $kol_company_id = $this->session->userdata('kol_company_id');
     $kol_role_id = $this->session->userdata('kol_role_id');
     if($kol_user_id == '' || $kol_company_id == ''){ header('location:'.base_url().'User'); }
-    $this->Master_Model->delete_info('role_id', $role_id, 'rest_role');
+    $this->Master_Model->delete_info('role_id', $role_id, 'kol_role');
     $this->session->set_flashdata('delete_success','success');
     header('location:'.base_url().'User/role');
   }

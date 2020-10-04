@@ -169,7 +169,7 @@
                   <tbody>
                     <?php $i=0; foreach ($user_list as $list) { $i++;
                       // $city_details = $this->Master_Model->get_info_arr_fields('city_name','city_id', $list->city_id, 'city');
-                      $role_details = $this->Master_Model->get_info_arr_fields('role_name','role_id', $list->role_id, 'rest_role');
+                      $role_details = $this->Master_Model->get_info_arr_fields('role_name','role_id', $list->role_id, 'kol_role');
                     ?>
                       <tr>
                         <td class="d-none"><?php echo $i; ?></td>
